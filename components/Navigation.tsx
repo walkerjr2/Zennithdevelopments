@@ -9,10 +9,11 @@ import { useContactModal } from '@/hooks/useContactModal';
 import { useAnalytics } from '@/hooks/useAnalytics';
 
 const navigation = [
-  { name: 'Services', href: '#services' },
-  { name: 'Work', href: '#work' },
-  { name: 'Process', href: '#process' },
-  { name: 'About', href: '#about' },
+  { name: 'Home', href: '/' },
+  { name: 'Services', href: '/#services' },
+  { name: 'Work', href: '/#work' },
+  { name: 'Process', href: '/#process' },
+  { name: 'About', href: '/about' },
 ];
 
 export function Navigation() {
@@ -29,16 +30,24 @@ export function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (name: string, href: string) => {
+  const handleNavClick = (name: string, href: string, e: React.MouseEvent<HTMLAnchorElement>) => {
     trackEvent('navigation_click', { section: name });
     setMobileMenuOpen(false);
     
+    // Handle anchor links on the same page
     if (href.startsWith('#')) {
+      e.preventDefault();
       const element = document.querySelector(href);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
+    // Handle anchor links with paths (e.g., /#services from /about page)
+    else if (href.includes('/#')) {
+      // Let the browser navigate to the page, then scroll
+      // The target page will handle the scroll on load
+    }
+    // For regular page links like /about, let the default behavior happen
   };
 
   const handleGetStarted = () => {
@@ -68,8 +77,7 @@ export function Navigation() {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(item.name, item.href);
+                  handleNavClick(item.name, item.href, e);
                 }}
                 className="text-slate-700 dark:text-slate-300 hover:text-zd-royal-blue dark:hover:text-zd-electric-cyan transition-colors duration-200 font-medium"
               >
@@ -118,8 +126,7 @@ export function Navigation() {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(item.name, item.href);
+                    handleNavClick(item.name, item.href, e);
                   }}
                   className="block text-lg text-slate-700 dark:text-slate-300 hover:text-zd-royal-blue dark:hover:text-zd-electric-cyan transition-colors font-medium"
                 >

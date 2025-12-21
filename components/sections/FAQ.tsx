@@ -7,11 +7,11 @@ import { ChevronDownIcon } from '@heroicons/react/24/outline';
 const faqs = [
   {
     question: 'How long does a typical project take?',
-    answer: 'Most projects are completed in 12 weeks from kickoff to launch. This includes discovery, design, development, testing, and deployment. However, timeline can vary based on project complexity and scope. We provide a detailed timeline during our initial consultation.',
+    answer: 'Project timelines vary based on complexity. Simple projects can be completed in as little as 2-3 weeks, while more complex solutions may take several months. This includes discovery, design, development, testing, and deployment. We provide a detailed timeline during our initial consultation based on your specific requirements.',
   },
   {
     question: 'What is your pricing structure?',
-    answer: 'Our pricing is project-based and depends on scope, complexity, and your specific requirements. Projects typically range from $15,000 to $100,000+. We offer transparent pricing with no hidden fees. Use our cost calculator or schedule a consultation for a detailed quote.',
+    answer: 'Our pricing is project-based and depends on scope, complexity, and your specific requirements. Projects start from $600 USD (approximately 93,000 JMD) and scale upward depending on features and complexity. We offer transparent pricing with no hidden fees. Use our cost calculator or schedule a consultation for a detailed quote.',
   },
   {
     question: 'Do you offer ongoing support and maintenance?',

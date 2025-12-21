@@ -10,22 +10,22 @@ import {
 
 const navigation = {
   services: [
-    { name: 'Web Development', href: '#services' },
-    { name: 'E-commerce Solutions', href: '#services' },
-    { name: 'Custom Integrations', href: '#services' },
-    { name: 'Performance Optimization', href: '#services' },
+    { name: 'Web Development', href: '/#services' },
+    { name: 'E-commerce Solutions', href: '/#services' },
+    { name: 'Custom Integrations', href: '/#services' },
+    { name: 'Performance Optimization', href: '/#services' },
   ],
   company: [
-    { name: 'About Us', href: '#about' },
-    { name: 'Our Process', href: '#process' },
-    { name: 'Portfolio', href: '#work' },
-    { name: 'Testimonials', href: '#testimonials' },
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Process', href: '/#process' },
+    { name: 'Portfolio', href: '/#work' },
   ],
   resources: [
     { name: 'Blog', href: '/blog' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'FAQ', href: '#faq' },
-    { name: 'Contact', href: '#hero' },
+    { name: 'FAQ', href: '/#faq' },
+    { name: 'Contact', href: '/#hero' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },

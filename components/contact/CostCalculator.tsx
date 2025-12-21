@@ -12,20 +12,20 @@ import {
 } from '@heroicons/react/24/outline';
 
 const projectTypes = [
-  { value: 'landing', label: 'Landing Page', basePrice: 5000, weeks: 2 },
-  { value: 'business', label: 'Business Website', basePrice: 15000, weeks: 8 },
-  { value: 'ecommerce', label: 'E-commerce Store', basePrice: 30000, weeks: 12 },
-  { value: 'webapp', label: 'Web Application', basePrice: 50000, weeks: 16 },
-  { value: 'custom', label: 'Custom Solution', basePrice: 75000, weeks: 20 },
+  { value: 'landing', label: 'Landing Page', basePrice: 600, weeks: 2 },
+  { value: 'business', label: 'Business Website', basePrice: 1500, weeks: 4 },
+  { value: 'ecommerce', label: 'E-commerce Store', basePrice: 3500, weeks: 8 },
+  { value: 'webapp', label: 'Web Application', basePrice: 5000, weeks: 12 },
+  { value: 'custom', label: 'Custom Solution', basePrice: 8000, weeks: 16 },
 ];
 
 const features = [
-  { value: 'cms', label: 'Content Management', price: 3000 },
-  { value: 'auth', label: 'User Authentication', price: 5000 },
-  { value: 'api', label: 'API Integration', price: 4000 },
-  { value: 'payment', label: 'Payment Processing', price: 4500 },
-  { value: 'analytics', label: 'Advanced Analytics', price: 3500 },
-  { value: 'seo', label: 'SEO Optimization', price: 2500 },
+  { value: 'cms', label: 'Content Management', price: 300 },
+  { value: 'auth', label: 'User Authentication', price: 500 },
+  { value: 'api', label: 'API Integration', price: 400 },
+  { value: 'payment', label: 'Payment Processing', price: 450 },
+  { value: 'analytics', label: 'Advanced Analytics', price: 350 },
+  { value: 'seo', label: 'SEO Optimization', price: 250 },
 ];
 
 export function CostCalculator() {

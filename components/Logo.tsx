@@ -13,7 +13,7 @@ export function Logo({ className = '', width = 200, height = 60 }: LogoProps) {
   return (
     <Link href="/" className={`block ${className}`}>
       <Image
-        src="/images/zenitth-logo.png"
+        src="/images/zendev-logo.png"
         alt="ZennithDevelopments"
         width={width}
         height={height}

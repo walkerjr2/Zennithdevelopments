@@ -11,50 +11,50 @@ import {
 
 const phases = [
   {
-    week: 'Weeks 1-2',
+    week: 'Days 1-2',
     phase: 'Discovery & Planning',
     icon: MagnifyingGlassIcon,
-    description: 'Deep dive into your business, goals, and target audience',
+    description: 'Quick deep dive into your business, goals, and target audience',
     deliverables: [
-      'Project scope document',
+      'Project scope & requirements',
       'Technical architecture plan',
-      'User journey maps',
-      'Timeline & milestones',
+      'Design direction',
+      'Clear timeline & milestones',
     ],
   },
   {
-    week: 'Weeks 3-5',
-    phase: 'Design & Prototyping',
+    week: 'Days 3-7',
+    phase: 'Design & Development',
     icon: PencilSquareIcon,
-    description: 'Create stunning designs that convert visitors into customers',
+    description: 'Rapid design and development working in parallel for speed',
     deliverables: [
-      'Wireframes & mockups',
-      'Interactive prototypes',
-      'Brand guidelines',
-      'Design system components',
+      'Modern, responsive design',
+      'Core functionality built',
+      'Content integration',
+      'Mobile optimization',
     ],
   },
   {
-    week: 'Weeks 6-10',
-    phase: 'Development & Testing',
+    week: 'Days 8-12',
+    phase: 'Testing & Refinement',
     icon: CodeBracketSquareIcon,
-    description: 'Build your solution with clean, scalable, and secure code',
+    description: 'Thorough testing and polish to ensure quality',
     deliverables: [
-      'Fully functional website',
-      'Admin dashboard',
-      'API integrations',
-      'Quality assurance testing',
-    ],
-  },
-  {
-    week: 'Weeks 11-12',
-    phase: 'Launch & Optimization',
-    icon: RocketLaunchIcon,
-    description: 'Go live with confidence and continuous improvement',
-    deliverables: [
-      'Production deployment',
+      'Cross-browser testing',
       'Performance optimization',
       'SEO implementation',
+      'Client review & feedback',
+    ],
+  },
+  {
+    week: 'Days 13-14',
+    phase: 'Launch & Support',
+    icon: RocketLaunchIcon,
+    description: 'Go live with confidence and ongoing support',
+    deliverables: [
+      'Production deployment',
+      'DNS & hosting setup',
+      'Training & documentation',
       '30-day support included',
     ],
   },
@@ -85,10 +85,10 @@ export function Process() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-4">
-            Our 12-Week Process
+            Our 2-Week Fast-Track Process
           </h2>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            From concept to launch, we follow a proven methodology that delivers results
+            From concept to launch in just 2-3 weeks. Speed without compromising quality.
           </p>
         </motion.div>
 
@@ -171,10 +171,10 @@ export function Process() {
         >
           <div className="p-6">
             <div className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-primary mb-2">
-              12 Weeks
+              2-3 Weeks
             </div>
             <div className="text-slate-600 dark:text-slate-400">
-              Average Project Timeline
+              Minimum Project Timeline
             </div>
           </div>
           <div className="p-6">

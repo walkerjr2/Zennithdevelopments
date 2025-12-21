@@ -8,86 +8,88 @@ import { Button } from '@/components/ui/Button';
 import { useContactModal } from '@/hooks/useContactModal';
 import { useAnalytics } from '@/hooks/useAnalytics';
 
-const categories = ['All', 'E-commerce', 'SaaS', 'Corporate', 'Custom'];
+const categories = ['All', 'Local Business', 'E-commerce', 'Restaurant', 'Services'];
 
 const projects = [
   {
     id: 1,
-    title: 'TechFlow SaaS Platform',
-    category: 'SaaS',
-    description: 'Enterprise project management platform with real-time collaboration',
-    image: '/images/project-1.jpg',
+    title: 'Sparkles Auto Spa',
+    category: 'Local Business',
+    description: 'Professional car detailing service website with online booking system',
+    image: '/images/project-sparkles.jpg',
+    url: 'https://sparklesautospajm.com',
+    featured: true,
     results: {
-      conversion: '+127%',
-      revenue: '+$2.4M',
-      users: '50K+',
+      'Load Time': '<2s',
+      'Mobile Score': '95/100',
+      'SEO Ready': '✓',
     },
-    tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'WebSocket'],
+    tags: ['Next.js', 'Responsive Design', 'Online Booking', 'SEO'],
   },
   {
     id: 2,
-    title: 'Luxe Fashion Store',
-    category: 'E-commerce',
-    description: 'High-end fashion e-commerce with AR try-on features',
-    image: '/images/project-2.jpg',
+    title: 'Island Eats Restaurant',
+    category: 'Restaurant',
+    description: 'Modern restaurant website with online ordering and menu management',
+    image: '/images/project-restaurant.jpg',
     results: {
-      conversion: '+89%',
-      revenue: '+$890K',
-      users: '25K+',
+      'Page Speed': '<3s',
+      'Conversion': '+40%',
+      'Mobile First': '✓',
     },
-    tags: ['Shopify', 'React', 'AR Integration', 'Stripe'],
+    tags: ['React', 'Online Ordering', 'Menu System', 'Mobile Design'],
   },
   {
     id: 3,
-    title: 'Summit Legal Group',
-    category: 'Corporate',
-    description: 'Professional services website with client portal',
-    image: '/images/project-3.jpg',
+    title: 'Paradise Realty',
+    category: 'Services',
+    description: 'Real estate agency website with property listings and inquiry forms',
+    image: '/images/project-realty.jpg',
     results: {
-      conversion: '+64%',
-      leads: '320+',
-      retention: '94%',
+      'Lead Gen': '+65%',
+      'User Time': '+3min',
+      'Responsive': '✓',
     },
-    tags: ['Next.js', 'CMS', 'Authentication', 'Analytics'],
+    tags: ['Next.js', 'CMS', 'Contact Forms', 'Gallery'],
   },
   {
     id: 4,
-    title: 'HealthTech Dashboard',
-    category: 'Custom',
-    description: 'Medical data visualization platform for healthcare providers',
-    image: '/images/project-4.jpg',
+    title: 'Tropical Vibes Store',
+    category: 'E-commerce',
+    description: 'E-commerce platform for local crafts with secure checkout',
+    image: '/images/project-ecommerce.jpg',
     results: {
-      efficiency: '+156%',
-      users: '10K+',
-      satisfaction: '4.8/5',
+      'Cart Rate': '+55%',
+      'Secure': '✓',
+      'Fast Load': '<2.5s',
     },
-    tags: ['React', 'D3.js', 'HIPAA', 'AWS'],
+    tags: ['Shopify', 'Payment Integration', 'Product Gallery', 'SEO'],
   },
   {
     id: 5,
-    title: 'Artisan Marketplace',
-    category: 'E-commerce',
-    description: 'Multi-vendor platform connecting artists with buyers',
-    image: '/images/project-5.jpg',
+    title: 'Wellness Spa & Retreat',
+    category: 'Services',
+    description: 'Luxury spa website with appointment booking and service showcase',
+    image: '/images/project-spa.jpg',
     results: {
-      vendors: '500+',
-      transactions: '$1.2M',
-      growth: '+203%',
+      'Bookings': '+45%',
+      'Mobile': '100%',
+      'Uptime': '99.9%',
     },
-    tags: ['Next.js', 'Stripe Connect', 'MongoDB', 'S3'],
+    tags: ['Next.js', 'Booking System', 'Gallery', 'Responsive'],
   },
   {
     id: 6,
-    title: 'InnovateCorp Portal',
-    category: 'Corporate',
-    description: 'Internal employee portal with HR and project management',
-    image: '/images/project-6.jpg',
+    title: 'Cafe Vibes',
+    category: 'Restaurant',
+    description: 'Cozy cafe website with digital menu and location information',
+    image: '/images/project-cafe.jpg',
     results: {
-      efficiency: '+78%',
-      adoption: '98%',
-      satisfaction: '4.7/5',
+      'Engagement': '+50%',
+      'Fast': '<2s',
+      'Reviews': '4.8/5',
     },
-    tags: ['React', 'Node.js', 'SSO', 'API Integration'],
+    tags: ['React', 'Digital Menu', 'Google Maps', 'Mobile Design'],
   },
 ];
 
@@ -160,6 +162,13 @@ export function Portfolio() {
             >
               {/* Project Image Placeholder */}
               <div className="relative h-64 bg-gradient-to-br from-zd-royal-blue to-zd-electric-cyan overflow-hidden">
+                {project.featured && (
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="px-3 py-1 bg-zd-accent-amber text-white text-xs font-bold rounded-full shadow-lg">
+                      LIVE PROJECT
+                    </span>
+                  </div>
+                )}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-white p-8">
                     <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
@@ -167,7 +176,17 @@ export function Portfolio() {
                   </div>
                 </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                <ArrowTopRightOnSquareIcon className="absolute top-4 right-4 w-6 h-6 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+                {project.url && (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute top-4 right-4 p-2 bg-white/20 backdrop-blur-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white/30"
+                    onClick={() => trackEvent('portfolio_visit', { project: project.title })}
+                  >
+                    <ArrowTopRightOnSquareIcon className="w-5 h-5 text-white" />
+                  </a>
+                )}
               </div>
 
               {/* Project Content */}
@@ -183,7 +202,7 @@ export function Portfolio() {
                       <div className="text-lg font-bold text-zd-royal-blue dark:text-zd-electric-cyan">
                         {value}
                       </div>
-                      <div className="text-xs text-slate-500 dark:text-slate-400 capitalize">
+                      <div className="text-xs text-slate-500 dark:text-slate-400">
                         {key}
                       </div>
                     </div>
@@ -191,7 +210,7 @@ export function Portfolio() {
                 </div>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
@@ -201,6 +220,19 @@ export function Portfolio() {
                     </span>
                   ))}
                 </div>
+
+                {/* Live Site Button */}
+                {project.url && (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full py-2 text-center bg-gradient-to-r from-zd-electric-cyan to-zd-royal-blue text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+                    onClick={() => trackEvent('portfolio_visit_button', { project: project.title })}
+                  >
+                    View Live Site
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}

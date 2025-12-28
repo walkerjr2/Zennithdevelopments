@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     question: 'Do you offer ongoing support and maintenance?',
-    answer: 'Yes! Every project includes 30 days of post-launch support. We also offer monthly maintenance packages starting at $500/month, which include updates, security monitoring, performance optimization, and priority support.',
+    answer: 'Yes! Every project includes 30 days of post-launch support. We also offer monthly maintenance packages starting at $100/month, which include updates, security monitoring, performance optimization, and priority support.',
   },
   {
     question: 'What technologies do you specialize in?',

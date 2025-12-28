@@ -102,7 +102,7 @@ export function MeetTheFounder() {
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
                 <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-                  Hey! I'm Cosroy, a Jamaican web developer passionate about helping local businesses 
+                  Hey! I'm Cosroy, a web developer passionate about helping local and international businesses 
                   succeed online. I started ZennithDevelopments because I saw too many talented 
                   entrepreneurs held back by expensive, slow web development services.
                 </p>

@@ -20,7 +20,7 @@ export function OurStory() {
             </h2>
             <div className="prose prose-lg dark:prose-invert max-w-none">
               <p className="text-lg text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
-                ZennithDevelopments was born from a simple observation: too many talented Jamaican 
+                ZennithDevelopments was born from a simple observation: too many talented 
                 businesses were being left behind in the digital age because traditional web development 
                 was either too expensive, too slow, or too complicated.
               </p>
@@ -34,7 +34,7 @@ export function OurStory() {
                 from just <span className="font-semibold text-zd-royal-blue dark:text-zd-electric-cyan">$600 USD</span>.
               </p>
               <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-                Today, we're proud to be helping Jamaican businesses compete and win in the digital marketplace.
+                Today, we're proud to be helping businesses compete and win in the digital marketplace.
               </p>
             </div>
           </motion.div>
@@ -56,7 +56,7 @@ export function OurStory() {
                 <div>
                   <h3 className="text-2xl font-bold mb-3">Our Mission</h3>
                   <p className="text-white/90 leading-relaxed">
-                    To empower every Jamaican business with a professional online presence that drives 
+                    To empower every business with a professional online presence that drives 
                     real results—fast, affordable, and without compromising quality.
                   </p>
                 </div>
@@ -72,7 +72,7 @@ export function OurStory() {
                 <div>
                   <h3 className="text-2xl font-bold mb-3">Our Vision</h3>
                   <p className="text-white/90 leading-relaxed">
-                    To become Jamaica's most trusted web development partner, known for speed, 
+                    To become the world's most trusted web development partner, known for speed, 
                     quality, and helping businesses achieve measurable growth online.
                   </p>
                 </div>

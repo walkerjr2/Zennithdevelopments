@@ -15,7 +15,7 @@ const stats = [
     icon: UserGroupIcon,
     value: '50+',
     label: 'Happy Clients',
-    description: "Jamaican businesses we've helped grow",
+    description: "Businesses we've helped grow",
     color: 'from-zd-royal-blue to-zd-deep-navy',
   },
   {

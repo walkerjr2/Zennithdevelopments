@@ -1,20 +1,46 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { createAssessment } from '@/lib/db';
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const { type, ...data } = body;
 
-    // Log the submission (in production, save to database)
+    // Log the submission
     console.log('Contact submission:', { type, data, timestamp: new Date().toISOString() });
 
-    // TODO: In production:
-    // 1. Save to database
-    // 2. Send email notification to team
-    // 3. Send confirmation email to user
-    // 4. Integrate with CRM (HubSpot, Salesforce, etc.)
+    // Save to database if it's a project assessment or questionnaire
+    if (type === 'project-assessment' || type === 'assessment' || type === 'questionnaire') {
+      try {
+        const assessment = await createAssessment({
+          clientName: data.name || data.clientName || 'Unknown',
+          email: data.email || '',
+          phone: data.phone || undefined,
+          company: data.company || undefined,
+          projectType: data.projectType || data.type || 'General Inquiry',
+          budget: data.budget || 'Not specified',
+          timeline: data.timeline || 'Not specified',
+          description: data.description || data.message || '',
+          features: data.goals || data.features || [], // 'goals' is what questionnaire uses
+          currentWebsite: data.currentWebsite || data.website || undefined,
+          targetAudience: data.targetAudience || undefined,
+          competitors: data.competitors || undefined,
+          additionalInfo: data.hearAbout ? `How they heard about us: ${data.hearAbout}` : (data.additionalInfo || data.notes || undefined),
+          status: 'new',
+          priority: 'medium',
+          notes: '',
+        });
+
+        console.log('✅ Assessment saved to database:', assessment.id);
+      } catch (dbError) {
+        console.error('❌ Failed to save to database:', dbError);
+        // Continue even if database save fails so user still gets success message
+      }
+    }
+
+    // TODO: Send email notifications
+    // const emailResult = await sendNotificationEmail(data);
     
-    // Mock successful response
     return NextResponse.json(
       {
         success: true,

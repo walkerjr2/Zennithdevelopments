@@ -64,11 +64,11 @@ const advantages = [
   },
   {
     icon: WrenchScrewdriverIcon,
-    title: 'Local Jamaican Business',
+    title: 'Local Businesses',
     description: 'We understand the local market and culture',
     benefits: [
       'Face-to-face meetings available',
-      'Jamaica-specific payment options',
+      'Region-specific payment options',
       'Understanding of local business needs',
     ],
   },

@@ -50,7 +50,7 @@ export function AboutHero() {
           >
             <SparklesIcon className="w-4 h-4 text-zd-electric-cyan" />
             <span className="text-sm font-semibold text-zd-royal-blue dark:text-zd-electric-cyan">
-              Proudly Jamaican 🇯🇲
+              ZenDev
             </span>
           </motion.div>
 
@@ -64,7 +64,7 @@ export function AboutHero() {
 
           {/* Subheadline */}
           <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 font-light mb-8 leading-relaxed">
-            We're a Jamaican web development agency on a mission to help local businesses 
+            We're a web development agency on a mission to help local and international businesses 
             thrive online with fast, affordable, and conversion-focused websites.
           </p>
 

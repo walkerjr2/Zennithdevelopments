@@ -1,0 +1,685 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "ZennithDevelopments" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "ZennithDevelopments" [ref=e7]
+        - generic [ref=e8]:
+          - link "Home" [ref=e9] [cursor=pointer]:
+            - /url: /
+          - link "Services" [ref=e10] [cursor=pointer]:
+            - /url: /#services
+          - link "Work" [ref=e11] [cursor=pointer]:
+            - /url: /#work
+          - link "Process" [ref=e12] [cursor=pointer]:
+            - /url: /#process
+          - link "About" [ref=e13] [cursor=pointer]:
+            - /url: /about
+        - button "Get Started" [ref=e15]
+  - main [ref=e16]:
+    - generic [ref=e19]:
+      - generic [ref=e21]:
+        - generic [ref=e25]: Accepting New Projects • Fast Turnaround
+        - img [ref=e26]
+      - heading "Premium Web Solutions That Drive Results" [level=1] [ref=e29]:
+        - generic [ref=e30]: Premium Web Solutions
+        - generic [ref=e31]: That Drive Results
+      - paragraph [ref=e32]: Custom websites and web applications built for Jamaican businesses ready to scale online. Projects starting from $600 USD and delivered in as little as 2-3 weeks.
+      - generic [ref=e34]:
+        - button "Get Free Project Assessment" [ref=e35]:
+          - img [ref=e37]
+          - text: Get Free Project Assessment
+          - img [ref=e40]
+        - button "Schedule Strategy Call" [ref=e42]:
+          - img [ref=e44]
+          - text: Schedule Strategy Call
+        - link "View Our Work" [ref=e46] [cursor=pointer]:
+          - /url: /portfolio
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - img [ref=e50]
+          - generic [ref=e52]: 4.9/5
+          - generic [ref=e53]: from 50+ clients
+        - generic [ref=e54]:
+          - img [ref=e55]
+          - generic [ref=e57]: 47%
+          - generic [ref=e58]: avg. conversion increase
+        - generic [ref=e59]:
+          - img [ref=e60]
+          - generic [ref=e62]: < 2hr
+          - generic [ref=e63]: response time
+      - generic [ref=e66] [cursor=pointer]: Explore Our Work
+    - generic [ref=e70]:
+      - generic [ref=e71]:
+        - heading "What We Build" [level=2] [ref=e72]
+        - paragraph [ref=e73]: Comprehensive web solutions tailored to your business goals
+      - generic [ref=e74]:
+        - generic [ref=e75]:
+          - img [ref=e78]
+          - heading "Custom Web Development" [level=3] [ref=e80]
+          - paragraph [ref=e81]: Bespoke web applications built with modern frameworks. Scalable, secure, and optimized for performance.
+          - list [ref=e82]:
+            - listitem [ref=e83]:
+              - img [ref=e84]
+              - text: React/Next.js
+            - listitem [ref=e86]:
+              - img [ref=e87]
+              - text: TypeScript
+            - listitem [ref=e89]:
+              - img [ref=e90]
+              - text: API Integration
+            - listitem [ref=e92]:
+              - img [ref=e93]
+              - text: Cloud Deployment
+          - button "Learn More" [ref=e95]:
+            - text: Learn More
+            - img [ref=e96]
+        - generic [ref=e98]:
+          - img [ref=e101]
+          - heading "E-commerce Solutions" [level=3] [ref=e103]
+          - paragraph [ref=e104]: Conversion-optimized online stores that drive sales. From product catalogs to checkout optimization.
+          - list [ref=e105]:
+            - listitem [ref=e106]:
+              - img [ref=e107]
+              - text: Shopify/Custom
+            - listitem [ref=e109]:
+              - img [ref=e110]
+              - text: Payment Integration
+            - listitem [ref=e112]:
+              - img [ref=e113]
+              - text: Inventory Management
+            - listitem [ref=e115]:
+              - img [ref=e116]
+              - text: Analytics
+          - button "Learn More" [ref=e118]:
+            - text: Learn More
+            - img [ref=e119]
+        - generic [ref=e121]:
+          - img [ref=e124]
+          - heading "Custom Integrations" [level=3] [ref=e126]
+          - paragraph [ref=e127]: Connect your tools and automate workflows. CRM, ERP, payment systems, and third-party APIs.
+          - list [ref=e128]:
+            - listitem [ref=e129]:
+              - img [ref=e130]
+              - text: API Development
+            - listitem [ref=e132]:
+              - img [ref=e133]
+              - text: Webhook Systems
+            - listitem [ref=e135]:
+              - img [ref=e136]
+              - text: Data Migration
+            - listitem [ref=e138]:
+              - img [ref=e139]
+              - text: Automation
+          - button "Learn More" [ref=e141]:
+            - text: Learn More
+            - img [ref=e142]
+        - generic [ref=e144]:
+          - img [ref=e147]
+          - heading "Performance Optimization" [level=3] [ref=e149]
+          - paragraph [ref=e150]: Speed up existing websites and boost conversions. SEO, Core Web Vitals, and user experience audits.
+          - list [ref=e151]:
+            - listitem [ref=e152]:
+              - img [ref=e153]
+              - text: SEO Optimization
+            - listitem [ref=e155]:
+              - img [ref=e156]
+              - text: Speed Enhancement
+            - listitem [ref=e158]:
+              - img [ref=e159]
+              - text: Conversion Rate
+            - listitem [ref=e161]:
+              - img [ref=e162]
+              - text: UX Audit
+          - button "Learn More" [ref=e164]:
+            - text: Learn More
+            - img [ref=e165]
+      - generic [ref=e167]:
+        - paragraph [ref=e168]: Not sure which service fits your needs?
+        - button "Take Our Quick Assessment" [ref=e169]
+    - generic [ref=e171]:
+      - generic [ref=e172]:
+        - heading "Our Work" [level=2] [ref=e173]
+        - paragraph [ref=e174]: Real results from real projects. See how we've helped businesses grow.
+      - generic [ref=e175]:
+        - button "All" [ref=e176]
+        - button "Local Business" [ref=e177]
+        - button "E-commerce" [ref=e178]
+        - button "Restaurant" [ref=e179]
+        - button "Services" [ref=e180]
+      - generic [ref=e181]:
+        - generic [ref=e182]:
+          - generic [ref=e183]:
+            - generic [ref=e184]: LIVE PROJECT
+            - generic [ref=e186]:
+              - heading "Sparkles Auto Spa" [level=3] [ref=e187]
+              - paragraph [ref=e188]: Local Business
+            - link [ref=e190] [cursor=pointer]:
+              - /url: https://sparklesautospajm.com
+              - img [ref=e191]
+          - generic [ref=e193]:
+            - paragraph [ref=e194]: Professional car detailing service website with online booking system
+            - generic [ref=e195]:
+              - generic [ref=e196]:
+                - generic [ref=e197]: <2s
+                - generic [ref=e198]: Load Time
+              - generic [ref=e199]:
+                - generic [ref=e200]: 95/100
+                - generic [ref=e201]: Mobile Score
+              - generic [ref=e202]:
+                - generic [ref=e203]: ✓
+                - generic [ref=e204]: SEO Ready
+            - generic [ref=e205]:
+              - generic [ref=e206]: Next.js
+              - generic [ref=e207]: Responsive Design
+              - generic [ref=e208]: Online Booking
+              - generic [ref=e209]: SEO
+            - link "View Live Site" [ref=e210] [cursor=pointer]:
+              - /url: https://sparklesautospajm.com
+        - generic [ref=e211]:
+          - generic [ref=e214]:
+            - heading "Island Eats Restaurant" [level=3] [ref=e215]
+            - paragraph [ref=e216]: Restaurant
+          - generic [ref=e218]:
+            - paragraph [ref=e219]: Modern restaurant website with online ordering and menu management
+            - generic [ref=e220]:
+              - generic [ref=e221]:
+                - generic [ref=e222]: <3s
+                - generic [ref=e223]: Page Speed
+              - generic [ref=e224]:
+                - generic [ref=e225]: +40%
+                - generic [ref=e226]: Conversion
+              - generic [ref=e227]:
+                - generic [ref=e228]: ✓
+                - generic [ref=e229]: Mobile First
+            - generic [ref=e230]:
+              - generic [ref=e231]: React
+              - generic [ref=e232]: Online Ordering
+              - generic [ref=e233]: Menu System
+              - generic [ref=e234]: Mobile Design
+        - generic [ref=e235]:
+          - generic [ref=e238]:
+            - heading "Paradise Realty" [level=3] [ref=e239]
+            - paragraph [ref=e240]: Services
+          - generic [ref=e242]:
+            - paragraph [ref=e243]: Real estate agency website with property listings and inquiry forms
+            - generic [ref=e244]:
+              - generic [ref=e245]:
+                - generic [ref=e246]: +65%
+                - generic [ref=e247]: Lead Gen
+              - generic [ref=e248]:
+                - generic [ref=e249]: +3min
+                - generic [ref=e250]: User Time
+              - generic [ref=e251]:
+                - generic [ref=e252]: ✓
+                - generic [ref=e253]: Responsive
+            - generic [ref=e254]:
+              - generic [ref=e255]: Next.js
+              - generic [ref=e256]: CMS
+              - generic [ref=e257]: Contact Forms
+              - generic [ref=e258]: Gallery
+        - generic [ref=e259]:
+          - generic [ref=e262]:
+            - heading "Tropical Vibes Store" [level=3] [ref=e263]
+            - paragraph [ref=e264]: E-commerce
+          - generic [ref=e266]:
+            - paragraph [ref=e267]: E-commerce platform for local crafts with secure checkout
+            - generic [ref=e268]:
+              - generic [ref=e269]:
+                - generic [ref=e270]: +55%
+                - generic [ref=e271]: Cart Rate
+              - generic [ref=e272]:
+                - generic [ref=e273]: ✓
+                - generic [ref=e274]: Secure
+              - generic [ref=e275]:
+                - generic [ref=e276]: <2.5s
+                - generic [ref=e277]: Fast Load
+            - generic [ref=e278]:
+              - generic [ref=e279]: Shopify
+              - generic [ref=e280]: Payment Integration
+              - generic [ref=e281]: Product Gallery
+              - generic [ref=e282]: SEO
+        - generic [ref=e283]:
+          - generic [ref=e286]:
+            - heading "Wellness Spa & Retreat" [level=3] [ref=e287]
+            - paragraph [ref=e288]: Services
+          - generic [ref=e290]:
+            - paragraph [ref=e291]: Luxury spa website with appointment booking and service showcase
+            - generic [ref=e292]:
+              - generic [ref=e293]:
+                - generic [ref=e294]: +45%
+                - generic [ref=e295]: Bookings
+              - generic [ref=e296]:
+                - generic [ref=e297]: 100%
+                - generic [ref=e298]: Mobile
+              - generic [ref=e299]:
+                - generic [ref=e300]: 99.9%
+                - generic [ref=e301]: Uptime
+            - generic [ref=e302]:
+              - generic [ref=e303]: Next.js
+              - generic [ref=e304]: Booking System
+              - generic [ref=e305]: Gallery
+              - generic [ref=e306]: Responsive
+        - generic [ref=e307]:
+          - generic [ref=e310]:
+            - heading "Cafe Vibes" [level=3] [ref=e311]
+            - paragraph [ref=e312]: Restaurant
+          - generic [ref=e314]:
+            - paragraph [ref=e315]: Cozy cafe website with digital menu and location information
+            - generic [ref=e316]:
+              - generic [ref=e317]:
+                - generic [ref=e318]: +50%
+                - generic [ref=e319]: Engagement
+              - generic [ref=e320]:
+                - generic [ref=e321]: <2s
+                - generic [ref=e322]: Fast
+              - generic [ref=e323]:
+                - generic [ref=e324]: 4.8/5
+                - generic [ref=e325]: Reviews
+            - generic [ref=e326]:
+              - generic [ref=e327]: React
+              - generic [ref=e328]: Digital Menu
+              - generic [ref=e329]: Google Maps
+              - generic [ref=e330]: Mobile Design
+      - generic [ref=e331]:
+        - paragraph [ref=e332]: Ready to see similar results for your business?
+        - button "Start Your Project" [ref=e333]
+    - generic [ref=e334]:
+      - img [ref=e336]
+      - generic [ref=e338]:
+        - generic [ref=e339]:
+          - heading "Our 2-Week Fast-Track Process" [level=2] [ref=e340]
+          - paragraph [ref=e341]: From concept to launch in just 2-3 weeks. Speed without compromising quality.
+        - generic [ref=e344]:
+          - generic [ref=e345]:
+            - generic [ref=e347]:
+              - generic [ref=e348]:
+                - img [ref=e350]
+                - generic [ref=e352]:
+                  - generic [ref=e353]: Days 1-2
+                  - heading "Discovery & Planning" [level=3] [ref=e354]
+              - paragraph [ref=e355]: Quick deep dive into your business, goals, and target audience
+              - generic [ref=e356]:
+                - generic [ref=e357]: "Key Deliverables:"
+                - generic [ref=e358]:
+                  - img [ref=e359]
+                  - generic [ref=e361]: Project scope & requirements
+                - generic [ref=e362]:
+                  - img [ref=e363]
+                  - generic [ref=e365]: Technical architecture plan
+                - generic [ref=e366]:
+                  - img [ref=e367]
+                  - generic [ref=e369]: Design direction
+                - generic [ref=e370]:
+                  - img [ref=e371]
+                  - generic [ref=e373]: Clear timeline & milestones
+            - generic [ref=e375]: "1"
+          - generic [ref=e376]:
+            - generic [ref=e378]:
+              - generic [ref=e379]:
+                - img [ref=e381]
+                - generic [ref=e383]:
+                  - generic [ref=e384]: Days 3-7
+                  - heading "Design & Development" [level=3] [ref=e385]
+              - paragraph [ref=e386]: Rapid design and development working in parallel for speed
+              - generic [ref=e387]:
+                - generic [ref=e388]: "Key Deliverables:"
+                - generic [ref=e389]:
+                  - img [ref=e390]
+                  - generic [ref=e392]: Modern, responsive design
+                - generic [ref=e393]:
+                  - img [ref=e394]
+                  - generic [ref=e396]: Core functionality built
+                - generic [ref=e397]:
+                  - img [ref=e398]
+                  - generic [ref=e400]: Content integration
+                - generic [ref=e401]:
+                  - img [ref=e402]
+                  - generic [ref=e404]: Mobile optimization
+            - generic [ref=e406]: "2"
+          - generic [ref=e407]:
+            - generic [ref=e409]:
+              - generic [ref=e410]:
+                - img [ref=e412]
+                - generic [ref=e414]:
+                  - generic [ref=e415]: Days 8-12
+                  - heading "Testing & Refinement" [level=3] [ref=e416]
+              - paragraph [ref=e417]: Thorough testing and polish to ensure quality
+              - generic [ref=e418]:
+                - generic [ref=e419]: "Key Deliverables:"
+                - generic [ref=e420]:
+                  - img [ref=e421]
+                  - generic [ref=e423]: Cross-browser testing
+                - generic [ref=e424]:
+                  - img [ref=e425]
+                  - generic [ref=e427]: Performance optimization
+                - generic [ref=e428]:
+                  - img [ref=e429]
+                  - generic [ref=e431]: SEO implementation
+                - generic [ref=e432]:
+                  - img [ref=e433]
+                  - generic [ref=e435]: Client review & feedback
+            - generic [ref=e437]: "3"
+          - generic [ref=e438]:
+            - generic [ref=e440]:
+              - generic [ref=e441]:
+                - img [ref=e443]
+                - generic [ref=e445]:
+                  - generic [ref=e446]: Days 13-14
+                  - heading "Launch & Support" [level=3] [ref=e447]
+              - paragraph [ref=e448]: Go live with confidence and ongoing support
+              - generic [ref=e449]:
+                - generic [ref=e450]: "Key Deliverables:"
+                - generic [ref=e451]:
+                  - img [ref=e452]
+                  - generic [ref=e454]: Production deployment
+                - generic [ref=e455]:
+                  - img [ref=e456]
+                  - generic [ref=e458]: DNS & hosting setup
+                - generic [ref=e459]:
+                  - img [ref=e460]
+                  - generic [ref=e462]: Training & documentation
+                - generic [ref=e463]:
+                  - img [ref=e464]
+                  - generic [ref=e466]: 30-day support included
+            - generic [ref=e468]: "4"
+        - generic [ref=e469]:
+          - generic [ref=e470]:
+            - generic [ref=e471]: 2-3 Weeks
+            - generic [ref=e472]: Minimum Project Timeline
+          - generic [ref=e473]:
+            - generic [ref=e474]: 97%
+            - generic [ref=e475]: On-Time Delivery Rate
+          - generic [ref=e476]:
+            - generic [ref=e477]: 100%
+            - generic [ref=e478]: Client Satisfaction
+    - generic [ref=e480]:
+      - generic [ref=e481]:
+        - heading "What Our Clients Say" [level=2] [ref=e482]
+        - paragraph [ref=e483]: Don't just take our word for it—hear from businesses we've helped grow
+      - generic [ref=e484]:
+        - generic [ref=e485]:
+          - generic [ref=e486]:
+            - img [ref=e487]
+            - img [ref=e489]
+            - img [ref=e491]
+            - img [ref=e493]
+            - img [ref=e495]
+          - blockquote [ref=e497]: "\"ZennithDevelopments transformed our outdated website into a conversion machine. Within 3 months, we saw a 127% increase in qualified leads. Their attention to detail and commitment to our success was exceptional.\""
+          - generic [ref=e498]:
+            - generic [ref=e499]:
+              - generic [ref=e500]: S
+              - generic [ref=e501]:
+                - generic [ref=e502]: Sarah Mitchell
+                - generic [ref=e503]: CEO, TechFlow Solutions
+            - generic [ref=e504]: +127% Leads
+        - generic [ref=e505]:
+          - button "Previous testimonial" [ref=e506]:
+            - img [ref=e507]
+          - button "Next testimonial" [ref=e509]:
+            - img [ref=e510]
+        - generic [ref=e512]:
+          - button "Go to testimonial 1" [ref=e513]
+          - button "Go to testimonial 2" [ref=e514]
+          - button "Go to testimonial 3" [ref=e515]
+          - button "Go to testimonial 4" [ref=e516]
+      - generic [ref=e517]:
+        - generic [ref=e518]:
+          - generic [ref=e519]: 50+
+          - generic [ref=e520]: Happy Clients
+        - generic [ref=e521]:
+          - generic [ref=e522]: 4.9/5
+          - generic [ref=e523]: Average Rating
+        - generic [ref=e524]:
+          - generic [ref=e525]: 100%
+          - generic [ref=e526]: Would Recommend
+        - generic [ref=e527]:
+          - generic [ref=e528]: $12M+
+          - generic [ref=e529]: Client Revenue Impact
+    - generic [ref=e531]:
+      - generic [ref=e532]:
+        - heading "Frequently Asked Questions" [level=2] [ref=e533]
+        - paragraph [ref=e534]: Everything you need to know about working with us
+      - generic [ref=e535]:
+        - generic [ref=e536]:
+          - button "How long does a typical project take?" [ref=e537]:
+            - generic [ref=e538]: How long does a typical project take?
+            - img [ref=e539]
+          - generic [ref=e542]: Project timelines vary based on complexity. Simple projects can be completed in as little as 2-3 weeks, while more complex solutions may take several months. This includes discovery, design, development, testing, and deployment. We provide a detailed timeline during our initial consultation based on your specific requirements.
+        - button "What is your pricing structure?" [ref=e544]:
+          - generic [ref=e545]: What is your pricing structure?
+          - img [ref=e546]
+        - button "Do you offer ongoing support and maintenance?" [ref=e549]:
+          - generic [ref=e550]: Do you offer ongoing support and maintenance?
+          - img [ref=e551]
+        - button "What technologies do you specialize in?" [ref=e554]:
+          - generic [ref=e555]: What technologies do you specialize in?
+          - img [ref=e556]
+        - button "Can you work with our existing website or do we need to start from scratch?" [ref=e559]:
+          - generic [ref=e560]: Can you work with our existing website or do we need to start from scratch?
+          - img [ref=e561]
+        - button "How involved do we need to be during the project?" [ref=e564]:
+          - generic [ref=e565]: How involved do we need to be during the project?
+          - img [ref=e566]
+        - button "What if we need changes after launch?" [ref=e569]:
+          - generic [ref=e570]: What if we need changes after launch?
+          - img [ref=e571]
+        - button "Do you provide hosting and domain services?" [ref=e574]:
+          - generic [ref=e575]: Do you provide hosting and domain services?
+          - img [ref=e576]
+      - generic [ref=e578]:
+        - paragraph [ref=e579]: Still have questions?
+        - paragraph [ref=e580]: We are here to help. Schedule a free consultation to discuss your project.
+        - link "Get in Touch →" [ref=e581] [cursor=pointer]:
+          - /url: "#hero"
+    - generic [ref=e587]:
+      - generic [ref=e588]:
+        - heading "Ready to Elevate Your Digital Presence?" [level=2] [ref=e589]:
+          - text: Ready to Elevate Your
+          - text: Digital Presence?
+        - paragraph [ref=e590]: Join 50+ successful businesses who trusted us to transform their online presence. Let's create something extraordinary together.
+        - generic [ref=e591]:
+          - button "Get Free Project Assessment" [ref=e592]:
+            - img [ref=e594]
+            - text: Get Free Project Assessment
+            - img [ref=e597]
+          - button "Schedule Strategy Call" [ref=e599]:
+            - img [ref=e601]
+            - text: Schedule Strategy Call
+          - link "View Our Work" [ref=e603] [cursor=pointer]:
+            - /url: /portfolio
+      - generic [ref=e604]:
+        - generic [ref=e605]:
+          - img [ref=e607]
+          - heading "100% Satisfaction" [level=3] [ref=e609]
+          - paragraph [ref=e610]: We work until you love it
+        - generic [ref=e611]:
+          - img [ref=e613]
+          - heading "On-Time Delivery" [level=3] [ref=e615]
+          - paragraph [ref=e616]: 97% of projects on schedule
+        - generic [ref=e617]:
+          - img [ref=e619]
+          - heading "Secure & Scalable" [level=3] [ref=e621]
+          - paragraph [ref=e622]: Built for growth
+        - generic [ref=e623]:
+          - img [ref=e625]
+          - heading "<2hr Response" [level=3] [ref=e627]
+          - paragraph [ref=e628]: Always here when you need us
+      - generic [ref=e630]:
+        - img [ref=e631]
+        - generic [ref=e633]: Rated 4.9/5 by 50+ clients
+  - contentinfo [ref=e634]:
+    - generic [ref=e635]:
+      - generic [ref=e636]:
+        - generic [ref=e637]:
+          - link "ZennithDevelopments" [ref=e638] [cursor=pointer]:
+            - /url: /
+            - img "ZennithDevelopments" [ref=e639]
+          - paragraph [ref=e640]: Transforming businesses through exceptional web development. We build digital experiences that drive growth and delight users.
+          - generic [ref=e641]:
+            - generic [ref=e642]:
+              - img [ref=e643]
+              - link "zennithdevelopments@gmail.com" [ref=e645] [cursor=pointer]:
+                - /url: "mailto: zennithdevelopments@gmail.com"
+            - generic [ref=e646]:
+              - img [ref=e647]
+              - link "(876) 839-6403" [ref=e649] [cursor=pointer]:
+                - /url: tel:+18768396403
+            - generic [ref=e650]:
+              - img [ref=e651]
+              - generic [ref=e654]: Kingston, Jamaica
+          - generic [ref=e655]:
+            - link "LinkedIn" [ref=e656] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e657]: LinkedIn
+              - img [ref=e658]
+            - link "Twitter" [ref=e660] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e661]: Twitter
+              - img [ref=e662]
+            - link "GitHub" [ref=e664] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e665]: GitHub
+              - img [ref=e666]
+        - generic [ref=e668]:
+          - heading "Services" [level=3] [ref=e669]
+          - list [ref=e670]:
+            - listitem [ref=e671]:
+              - link "Web Development" [ref=e672] [cursor=pointer]:
+                - /url: /#services
+            - listitem [ref=e673]:
+              - link "E-commerce Solutions" [ref=e674] [cursor=pointer]:
+                - /url: /#services
+            - listitem [ref=e675]:
+              - link "Custom Integrations" [ref=e676] [cursor=pointer]:
+                - /url: /#services
+            - listitem [ref=e677]:
+              - link "Performance Optimization" [ref=e678] [cursor=pointer]:
+                - /url: /#services
+        - generic [ref=e679]:
+          - heading "Company" [level=3] [ref=e680]
+          - list [ref=e681]:
+            - listitem [ref=e682]:
+              - link "Home" [ref=e683] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e684]:
+              - link "About Us" [ref=e685] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e686]:
+              - link "Our Process" [ref=e687] [cursor=pointer]:
+                - /url: /#process
+            - listitem [ref=e688]:
+              - link "Portfolio" [ref=e689] [cursor=pointer]:
+                - /url: /#work
+        - generic [ref=e690]:
+          - heading "Resources" [level=3] [ref=e691]
+          - list [ref=e692]:
+            - listitem [ref=e693]:
+              - link "Blog" [ref=e694] [cursor=pointer]:
+                - /url: /blog
+            - listitem [ref=e695]:
+              - link "Case Studies" [ref=e696] [cursor=pointer]:
+                - /url: /case-studies
+            - listitem [ref=e697]:
+              - link "FAQ" [ref=e698] [cursor=pointer]:
+                - /url: /#faq
+            - listitem [ref=e699]:
+              - link "Contact" [ref=e700] [cursor=pointer]:
+                - /url: /#hero
+      - generic [ref=e702]:
+        - paragraph [ref=e703]: © 2025 ZennithDevelopments. All rights reserved.
+        - generic [ref=e704]:
+          - link "Privacy Policy" [ref=e705] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms of Service" [ref=e706] [cursor=pointer]:
+            - /url: /terms
+          - link "Cookie Policy" [ref=e707] [cursor=pointer]:
+            - /url: /cookies
+  - button "Open Next.js Dev Tools" [ref=e713] [cursor=pointer]:
+    - img [ref=e714]
+  - alert [ref=e717]
+  - generic:
+    - generic:
+      - generic:
+        - dialog:
+          - generic [ref=e721]:
+            - button "Close modal" [ref=e722]:
+              - img [ref=e723]
+            - generic [ref=e725]:
+              - heading "Project Assessment" [level=3] [ref=e726]
+              - paragraph [ref=e727]: Tell us about your project so we can provide the best recommendations.
+              - generic [ref=e728]:
+                - generic [ref=e729]:
+                  - generic [ref=e730]:
+                    - generic [ref=e731]: Full Name *
+                    - textbox "John Doe" [ref=e732]: Automated Test User
+                  - generic [ref=e733]:
+                    - generic [ref=e734]: Email *
+                    - textbox "john@example.com" [ref=e735]: jrcosroy.walker@gmail.com
+                - generic [ref=e736]:
+                  - generic [ref=e737]: Phone Number *
+                  - textbox "(555) 123-4567" [ref=e738]: "8768396403"
+                - generic [ref=e739]:
+                  - generic [ref=e740]: Project Type *
+                  - combobox [ref=e741]:
+                    - option "Select a project type"
+                    - option "New Website" [selected]
+                    - option "Website Redesign"
+                    - option "E-commerce Store"
+                    - option "Web Application"
+                    - option "Landing Page"
+                    - option "Other"
+                - generic [ref=e742]:
+                  - generic [ref=e743]:
+                    - generic [ref=e744]: Budget Range *
+                    - combobox [ref=e745]:
+                      - option "Select budget"
+                      - option "Under $15,000" [selected]
+                      - option "$15,000 - $30,000"
+                      - option "$30,000 - $50,000"
+                      - option "$50,000 - $100,000"
+                      - option "Over $100,000"
+                  - generic [ref=e746]:
+                    - generic [ref=e747]: Timeline *
+                    - combobox [ref=e748]:
+                      - option "Select timeline"
+                      - option "ASAP (1-2 months)" [selected]
+                      - option "Flexible (2-3 months)"
+                      - option "No Rush (3+ months)"
+                      - option "Just Exploring"
+                - generic [ref=e749]:
+                  - generic [ref=e750]: Current Website (if any)
+                  - textbox "https://example.com" [ref=e751]
+                - generic [ref=e752]:
+                  - generic [ref=e753]: Project Goals * (Select all that apply)
+                  - generic [ref=e754]:
+                    - generic [ref=e755] [cursor=pointer]:
+                      - checkbox "Increase Sales" [checked] [ref=e756]
+                      - generic [ref=e757]: Increase Sales
+                    - generic [ref=e758] [cursor=pointer]:
+                      - checkbox "Generate Leads" [ref=e759]
+                      - generic [ref=e760]: Generate Leads
+                    - generic [ref=e761] [cursor=pointer]:
+                      - checkbox "Build Brand Awareness" [ref=e762]
+                      - generic [ref=e763]: Build Brand Awareness
+                    - generic [ref=e764] [cursor=pointer]:
+                      - checkbox "Improve User Experience" [ref=e765]
+                      - generic [ref=e766]: Improve User Experience
+                    - generic [ref=e767] [cursor=pointer]:
+                      - checkbox "Launch New Product" [ref=e768]
+                      - generic [ref=e769]: Launch New Product
+                    - generic [ref=e770] [cursor=pointer]:
+                      - checkbox "Modernize Technology" [ref=e771]
+                      - generic [ref=e772]: Modernize Technology
+                - generic [ref=e773]:
+                  - generic [ref=e774]: Project Description *
+                  - textbox "Tell us about your project vision, target audience, and key features..." [ref=e775]: This is an automated test of the EmailJS integration. Testing that emails are sent correctly.
+                - generic [ref=e776]:
+                  - generic [ref=e777]: How did you hear about us?
+                  - textbox "Google, LinkedIn, Referral, etc." [ref=e778]
+                - button "Submit Assessment" [ref=e779]
+```

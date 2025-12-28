@@ -91,7 +91,7 @@ export function Hero() {
             className="text-xl sm:text-2xl lg:text-3xl text-slate-600 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed font-light"
           >
             Custom websites and web applications built for{' '}
-            <span className="font-semibold text-zd-royal-blue dark:text-zd-electric-cyan">Jamaican businesses</span>
+            <span className="font-semibold text-zd-royal-blue dark:text-zd-electric-cyan">businesses</span>
             {' '}ready to scale online. Projects starting from{' '}
             <span className="font-semibold text-zd-royal-blue dark:text-zd-electric-cyan">$600 USD</span>
             {' '}and delivered in as little as{' '}

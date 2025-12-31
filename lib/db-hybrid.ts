@@ -23,17 +23,34 @@ export interface ProjectAssessment {
   updatedAt: string;
 }
 
-// Detect environment
-const isProduction = process.env.VERCEL_ENV === 'production' || process.env.KV_REST_API_URL;
+// Detect environment and choose the right database
+function getDBType() {
+  // Check for standard Redis URL (Redis Labs, Upstash, etc.)
+  if (process.env.KV_URL || process.env.REDIS_URL) {
+    return 'redis';
+  }
+  // Check for Vercel KV (REST API based)
+  if (process.env.KV_REST_API_URL) {
+    return 'vercel-kv';
+  }
+  // Default to file system for local development
+  return 'filesystem';
+}
 
 // Dynamically import the correct database implementation
 async function getDB() {
-  if (isProduction) {
-    // Use Vercel KV in production
-    return await import('./db-vercel');
-  } else {
-    // Use file system in development
-    return await import('./db');
+  const dbType = getDBType();
+  
+  switch (dbType) {
+    case 'redis':
+      // Use standard Redis client (works with Redis Labs, Upstash, etc.)
+      return await import('./db-redis');
+    case 'vercel-kv':
+      // Use Vercel KV (REST API based)
+      return await import('./db-vercel');
+    default:
+      // Use file system for local development
+      return await import('./db');
   }
 }
 

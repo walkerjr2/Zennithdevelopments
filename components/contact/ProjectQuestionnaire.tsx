@@ -15,7 +15,7 @@ const schema = z.object({
   email: z.string().email('Please enter a valid email'),
   phone: z.string().min(10, 'Please enter a valid phone number'),
   projectType: z.string().min(1, 'Please select a project type'),
-  budget: z.string().min(1, 'Please select a budget range'),
+  budget: z.string().min(1, 'Please select a budget range (USD)'),
   timeline: z.string().min(1, 'Please select a timeline'),
   description: z.string().min(20, 'Please provide at least 20 characters'),
   currentWebsite: z.string().optional(),
@@ -35,16 +35,16 @@ const projectTypes = [
 ];
 
 const budgetRanges = [
-  'Under $15,000',
-  '$15,000 - $30,000',
-  '$30,000 - $50,000',
-  '$50,000 - $100,000',
-  'Over $100,000',
+  'Under $1500',
+  '$1500 - $3000',
+  '$3000 - $5000',
+  '$5000 - $10000',
+  'Over $10000',
 ];
 
 const timelines = [
-  'ASAP (1-2 months)',
-  'Flexible (2-3 months)',
+  'ASAP (1-3 weeks)',
+  'Flexible (1-3 months)',
   'No Rush (3+ months)',
   'Just Exploring',
 ];

@@ -2,7 +2,7 @@
 
 import { create } from 'zustand';
 
-type ModalType = 'questionnaire' | 'calendar' | 'calculator' | 'quick' | null;
+type ModalType = 'questionnaire' | 'calendar' | 'calculator' | 'quick' | 'tier-confirmation' | 'selector' | 'path-selector' | null;
 
 interface ContactModalState {
   isOpen: boolean;

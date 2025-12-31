@@ -5,16 +5,22 @@ import { Dialog, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { useContactModal } from '@/hooks/useContactModal';
 import { ContactPathSelector } from './ContactPathSelector';
+import { AssessmentPathSelector } from './AssessmentPathSelector';
 import { ProjectQuestionnaire } from './ProjectQuestionnaire';
 import { CalendarBooking } from './CalendarBooking';
 import { CostCalculator } from './CostCalculator';
 import { QuickContactForm } from './QuickContactForm';
+import { TierConfirmationModal } from './TierConfirmationModal';
 
 export function ContactModal() {
   const { isOpen, modalType, closeModal } = useContactModal();
 
   const renderContent = () => {
     switch (modalType) {
+      case 'tier-confirmation':
+        return <TierConfirmationModal />;
+      case 'path-selector':
+        return <AssessmentPathSelector />;
       case 'questionnaire':
         return <ProjectQuestionnaire />;
       case 'calendar':

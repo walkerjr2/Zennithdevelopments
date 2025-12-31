@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/Button';
 import { useContactModal } from '@/hooks/useContactModal';
 import { useAnalytics } from '@/hooks/useAnalytics';
-import { ArrowRightIcon, CalendarIcon, SparklesIcon } from '@heroicons/react/24/outline';
+import { ArrowRightIcon, CalendarIcon, SparklesIcon, CalculatorIcon } from '@heroicons/react/24/outline';
 
 interface CTAClusterProps {
   context?: string;
@@ -38,21 +38,21 @@ export function CTACluster({
 
   return (
     <div className={`${layoutClasses[variant]} ${className}`}>
-      {/* Primary CTA */}
+      {/* Primary CTA - Opens choice between Questionnaire or Calculator */}
       <Button
         size="lg"
         variant="primary"
-        onClick={() => handleCTAClick('assessment', 'questionnaire')}
-        className="w-full sm:w-auto min-w-[260px] group"
+        onClick={() => handleCTAClick('assessment', 'path-selector')}
+        className="w-full sm:w-auto min-w-[240px] group"
         leftIcon={<SparklesIcon className="w-5 h-5" />}
         rightIcon={
           <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
         }
       >
-        Get Free Project Assessment
+        Get Free Assessment
       </Button>
 
-      {/* Secondary CTA */}
+      {/* Secondary CTA - Direct to Calendar */}
       <Button
         size="lg"
         variant="secondary"
@@ -63,7 +63,7 @@ export function CTACluster({
         Schedule Strategy Call
       </Button>
 
-      {/* Tertiary CTA */}
+      {/* Portfolio Link */}
       {showPortfolioLink && (
         <a
           href="/portfolio"

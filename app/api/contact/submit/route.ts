@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createAssessment } from '@/lib/db';
+import { sendCalculatorEmails } from '@/lib/send-calculator-emails';
+import { sendCalculatorEmailsViaEmailJS } from '@/lib/send-calculator-emails-emailjs';
 
 export async function POST(request: NextRequest) {
   try {
@@ -9,8 +11,8 @@ export async function POST(request: NextRequest) {
     // Log the submission
     console.log('Contact submission:', { type, data, timestamp: new Date().toISOString() });
 
-    // Save to database if it's a project assessment or questionnaire
-    if (type === 'project-assessment' || type === 'assessment' || type === 'questionnaire') {
+    // Save to database if it's a project assessment, questionnaire, or cost calculator
+    if (type === 'project-assessment' || type === 'assessment' || type === 'questionnaire' || type === 'cost-calculator') {
       try {
         const assessment = await createAssessment({
           clientName: data.name || data.clientName || 'Unknown',
@@ -18,16 +20,24 @@ export async function POST(request: NextRequest) {
           phone: data.phone || undefined,
           company: data.company || undefined,
           projectType: data.projectType || data.type || 'General Inquiry',
-          budget: data.budget || 'Not specified',
-          timeline: data.timeline || 'Not specified',
-          description: data.description || data.message || '',
-          features: data.goals || data.features || [], // 'goals' is what questionnaire uses
+          budget: type === 'cost-calculator' 
+            ? `$${data.estimatedCost?.toLocaleString() || 'Not specified'}` 
+            : (data.budget || 'Not specified'),
+          timeline: type === 'cost-calculator' 
+            ? `${data.estimatedWeeks || 0} weeks` 
+            : (data.timeline || 'Not specified'),
+          description: type === 'cost-calculator'
+            ? `Cost Calculator Submission:\n\nProject: ${data.projectType}\nPages: ${data.numberOfPages}\nFeatures: ${data.selectedFeatures?.join(', ') || 'None'}\n\nAdditional Details: ${data.message || 'None provided'}`
+            : (data.description || data.message || ''),
+          features: data.selectedFeatures || data.goals || data.features || [],
           currentWebsite: data.currentWebsite || data.website || undefined,
           targetAudience: data.targetAudience || undefined,
           competitors: data.competitors || undefined,
-          additionalInfo: data.hearAbout ? `How they heard about us: ${data.hearAbout}` : (data.additionalInfo || data.notes || undefined),
+          additionalInfo: type === 'cost-calculator'
+            ? `Source: Cost Calculator | Base Price: $${data.basePrice || 0} | Calculation Details: ${JSON.stringify(data.calculationDetails)}`
+            : (data.hearAbout ? `How they heard about us: ${data.hearAbout}` : (data.additionalInfo || data.notes || undefined)),
           status: 'new',
-          priority: 'medium',
+          priority: type === 'cost-calculator' ? 'high' : 'medium', // Calculator submissions are high priority
           notes: '',
         });
 
@@ -38,8 +48,40 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // TODO: Send email notifications
-    // const emailResult = await sendNotificationEmail(data);
+    // Send email notifications for calculator submissions
+    console.log('🔍 Type:', type);
+    console.log('🔍 Using EmailJS for email notifications');
+    
+    if (type === 'cost-calculator') {
+      try {
+        console.log('📧 Attempting to send calculator emails via EmailJS...');
+        
+        const emailResults = await sendCalculatorEmailsViaEmailJS({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          company: data.company,
+          projectType: data.projectType,
+          estimatedCost: data.estimatedCost,
+          estimatedWeeks: data.estimatedWeeks,
+          numberOfPages: data.numberOfPages,
+          selectedFeatures: data.selectedFeatures || [],
+          message: data.message,
+        });
+
+        console.log('📧 Email notification results:', emailResults);
+        
+        if (!emailResults.clientEmail.success) {
+          console.warn('⚠️ Client email failed:', emailResults.clientEmail.error);
+        }
+        if (!emailResults.adminEmail.success) {
+          console.warn('⚠️ Admin email failed:', emailResults.adminEmail.error);
+        }
+      } catch (emailError) {
+        console.error('❌ Failed to send email notifications:', emailError);
+        // Don't fail the request if emails fail - user already submitted successfully
+      }
+    }
     
     return NextResponse.json(
       {

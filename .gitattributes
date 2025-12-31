@@ -1,0 +1,5 @@
+# Prevent merge conflicts on documentation files
+*.md merge=union
+
+# Use our version for component files during merge conflicts
+components/**/*.tsx merge=ours

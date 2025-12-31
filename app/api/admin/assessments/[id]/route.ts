@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getAssessmentById, updateAssessment, deleteAssessment } from '@/lib/db-vercel';
+import { getAssessmentById, updateAssessment, deleteAssessment } from '@/lib/db-hybrid';
 
 // Simple authentication check
 function isAuthenticated(request: NextRequest): boolean {

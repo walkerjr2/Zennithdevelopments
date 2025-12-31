@@ -41,22 +41,22 @@ function ensureDataDir() {
 }
 
 // Read all assessments
-export function getAllAssessments(): ProjectAssessment[] {
+export async function getAllAssessments(): Promise<ProjectAssessment[]> {
   ensureDataDir();
   const data = fs.readFileSync(DB_PATH, 'utf-8');
   return JSON.parse(data).assessments;
 }
 
 // Get assessment by ID
-export function getAssessmentById(id: string): ProjectAssessment | null {
-  const assessments = getAllAssessments();
+export async function getAssessmentById(id: string): Promise<ProjectAssessment | null> {
+  const assessments = await getAllAssessments();
   return assessments.find(a => a.id === id) || null;
 }
 
 // Create new assessment
-export function createAssessment(data: Omit<ProjectAssessment, 'id' | 'createdAt' | 'updatedAt'>): ProjectAssessment {
+export async function createAssessment(data: Omit<ProjectAssessment, 'id' | 'createdAt' | 'updatedAt'>): Promise<ProjectAssessment> {
   ensureDataDir();
-  const assessments = getAllAssessments();
+  const assessments = await getAllAssessments();
   
   const newAssessment: ProjectAssessment = {
     ...data,
@@ -72,9 +72,9 @@ export function createAssessment(data: Omit<ProjectAssessment, 'id' | 'createdAt
 }
 
 // Update assessment
-export function updateAssessment(id: string, updates: Partial<ProjectAssessment>): ProjectAssessment | null {
+export async function updateAssessment(id: string, updates: Partial<ProjectAssessment>): Promise<ProjectAssessment | null> {
   ensureDataDir();
-  const assessments = getAllAssessments();
+  const assessments = await getAllAssessments();
   const index = assessments.findIndex(a => a.id === id);
   
   if (index === -1) return null;
@@ -92,9 +92,9 @@ export function updateAssessment(id: string, updates: Partial<ProjectAssessment>
 }
 
 // Delete assessment
-export function deleteAssessment(id: string): boolean {
+export async function deleteAssessment(id: string): Promise<boolean> {
   ensureDataDir();
-  const assessments = getAllAssessments();
+  const assessments = await getAllAssessments();
   const filteredAssessments = assessments.filter(a => a.id !== id);
   
   if (filteredAssessments.length === assessments.length) {
@@ -106,14 +106,14 @@ export function deleteAssessment(id: string): boolean {
 }
 
 // Get assessments with filters
-export function getFilteredAssessments(filters: {
+export async function getFilteredAssessments(filters: {
   status?: string;
   priority?: string;
   search?: string;
   startDate?: string;
   endDate?: string;
-}): ProjectAssessment[] {
-  let assessments = getAllAssessments();
+}): Promise<ProjectAssessment[]> {
+  let assessments = await getAllAssessments();
   
   if (filters.status) {
     assessments = assessments.filter(a => a.status === filters.status);
@@ -146,8 +146,8 @@ export function getFilteredAssessments(filters: {
 }
 
 // Get statistics
-export function getAssessmentStats() {
-  const assessments = getAllAssessments();
+export async function getAssessmentStats() {
+  const assessments = await getAllAssessments();
   
   return {
     total: assessments.length,

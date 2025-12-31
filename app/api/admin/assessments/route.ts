@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getAllAssessments, getFilteredAssessments, getAssessmentStats } from '@/lib/db';
+import { getAllAssessments, getFilteredAssessments, getAssessmentStats } from '@/lib/db-vercel';
 
 // Simple authentication check
 function isAuthenticated(request: NextRequest): boolean {
@@ -28,7 +28,7 @@ export async function GET(request: NextRequest) {
 
     // Get statistics
     if (action === 'stats') {
-      const stats = getAssessmentStats();
+      const stats = await getAssessmentStats();
       return NextResponse.json(stats);
     }
 
@@ -41,7 +41,7 @@ export async function GET(request: NextRequest) {
       endDate: searchParams.get('endDate') || undefined,
     };
 
-    const assessments = getFilteredAssessments(filters);
+    const assessments = await getFilteredAssessments(filters);
 
     return NextResponse.json(assessments);
   } catch (error) {

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getAssessmentById, updateAssessment, deleteAssessment } from '@/lib/db';
+import { getAssessmentById, updateAssessment, deleteAssessment } from '@/lib/db-vercel';
 
 // Simple authentication check
 function isAuthenticated(request: NextRequest): boolean {
@@ -23,7 +23,7 @@ export async function GET(
 
   try {
     const { id } = await params;
-    const assessment = getAssessmentById(id);
+    const assessment = await getAssessmentById(id);
     
     if (!assessment) {
       return NextResponse.json(
@@ -57,7 +57,7 @@ export async function PATCH(
   try {
     const { id } = await params;
     const updates = await request.json();
-    const assessment = updateAssessment(id, updates);
+    const assessment = await updateAssessment(id, updates);
     
     if (!assessment) {
       return NextResponse.json(
@@ -91,7 +91,7 @@ export async function DELETE(
 
   try {
     const { id } = await params;
-    const success = deleteAssessment(id);
+    const success = await deleteAssessment(id);
     
     if (!success) {
       return NextResponse.json(

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createAssessment } from '@/lib/db';
+import { createAssessment } from '@/lib/db-vercel';
 import { sendCalculatorEmails } from '@/lib/send-calculator-emails';
 import { sendCalculatorEmailsViaEmailJS } from '@/lib/send-calculator-emails-emailjs';
 

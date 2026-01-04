@@ -31,7 +31,7 @@ export function TierConfirmationModal({
   const displayTier = tier || context?.tier || 'Package';
   const displayPrice = price || context?.price;
 
-  const handlePathSelection = (path: 'calendar' | 'questionnaire' | 'quick') => {
+  const handlePathSelection = (path: 'calendar' | 'quick') => {
     trackEvent('conversion_path_selected', { 
       path,
       service: displayService,
@@ -51,32 +51,16 @@ export function TierConfirmationModal({
       id: 'calendar',
       icon: CalendarIcon,
       emoji: '📅',
-      title: 'Book Consultation',
+      title: 'Schedule a Call',
       time: '30 seconds',
-      description: 'Schedule a free 15-min call to discuss your project',
-      badge: 'Fastest',
+      description: 'Book a free 15-min consultation to discuss your project',
+      badge: 'Recommended',
       badgeColor: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400',
       benefits: [
         'Talk to us directly',
         'Ask questions live',
-        'Get immediate feedback',
-        'See our availability'
-      ]
-    },
-    {
-      id: 'questionnaire',
-      icon: DocumentTextIcon,
-      emoji: '📝',
-      title: 'Project Details',
-      time: '3 minutes',
-      description: 'Fill out detailed questionnaire about your needs',
-      badge: 'Most Detail',
-      badgeColor: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400',
-      benefits: [
-        'Share all requirements',
-        'Upload files/references',
-        'Detailed project scope',
-        'Complete assessment'
+        'Get immediate answers',
+        'Start your project faster'
       ]
     },
     {
@@ -85,14 +69,14 @@ export function TierConfirmationModal({
       emoji: '💬',
       title: 'Quick Contact',
       time: '10 seconds',
-      description: 'Just send your contact info and we\'ll reach out',
-      badge: 'Easiest',
+      description: 'Share your contact info and we\'ll reach out within 2 hours',
+      badge: 'Fastest',
       badgeColor: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400',
       benefits: [
-        'Super quick',
-        'No commitment',
-        'We\'ll contact you',
-        'Perfect for mobile'
+        'Super quick form',
+        'No calendar needed',
+        'We call you back',
+        'Perfect for busy people'
       ]
     }
   ];
@@ -124,12 +108,12 @@ export function TierConfirmationModal({
         </div>
         
         <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-          How would you like to get started with your <span className="font-semibold text-slate-900 dark:text-white">{displayService}</span> project?
+          Ready to get started with your <span className="font-semibold text-slate-900 dark:text-white">{displayService}</span> project?
         </p>
       </motion.div>
 
-      {/* Three Path Options */}
-      <div className="grid md:grid-cols-3 gap-6 mb-8">
+      {/* Two Path Options - Streamlined for Hot Leads */}
+      <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
         {paths.map((path, index) => (
           <motion.div
             key={path.id}
@@ -177,10 +161,9 @@ export function TierConfirmationModal({
               <Button
                 variant="primary"
                 className="w-full group-hover:scale-105 transition-transform"
-                onClick={() => handlePathSelection(path.id as 'calendar' | 'questionnaire' | 'quick')}
+                onClick={() => handlePathSelection(path.id as 'calendar' | 'quick')}
               >
-                {path.title === 'Book Consultation' && 'Book Now'}
-                {path.title === 'Project Details' && 'Fill Form'}
+                {path.title === 'Schedule a Call' && 'Book Now'}
                 {path.title === 'Quick Contact' && 'Send Info'}
               </Button>
             </div>
@@ -188,19 +171,14 @@ export function TierConfirmationModal({
         ))}
       </div>
 
-      {/* Trust Signals */}
+      {/* Trust Signals with Urgency */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
+        transition={{ delay: 0.3 }}
         className="text-center"
       >
-        <div className="inline-flex flex-wrap items-center justify-center gap-4 text-sm text-slate-500 dark:text-slate-400">
-          <div className="flex items-center gap-1">
-            <CheckCircleIcon className="w-4 h-4 text-green-500" />
-            <span>No commitment required</span>
-          </div>
-          <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600" />
+        <div className="inline-flex flex-wrap items-center justify-center gap-4 text-sm text-slate-500 dark:text-slate-400 mb-4">
           <div className="flex items-center gap-1">
             <CheckCircleIcon className="w-4 h-4 text-green-500" />
             <span>Free consultation</span>
@@ -208,25 +186,34 @@ export function TierConfirmationModal({
           <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600" />
           <div className="flex items-center gap-1">
             <CheckCircleIcon className="w-4 h-4 text-green-500" />
-            <span>Response within 24 hours</span>
+            <span>2-hour response time</span>
+          </div>
+          <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600" />
+          <div className="flex items-center gap-1">
+            <CheckCircleIcon className="w-4 h-4 text-green-500" />
+            <span>No commitment needed</span>
           </div>
         </div>
+        
+        <p className="text-xs text-slate-400 dark:text-slate-500">
+          🔥 Limited slots available this month
+        </p>
       </motion.div>
 
       {/* Optional: Not ready yet? */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
+        transition={{ delay: 0.4 }}
         className="text-center mt-6"
       >
         <p className="text-sm text-slate-500 dark:text-slate-400">
-          Not ready yet?{' '}
+          Need more information?{' '}
           <button
             onClick={() => openModal('selector')}
             className="text-zd-royal-blue dark:text-zd-electric-cyan hover:underline font-medium"
           >
-            Explore other options
+            View all options
           </button>
         </p>
       </motion.div>

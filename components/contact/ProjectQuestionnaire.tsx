@@ -60,7 +60,7 @@ const goalOptions = [
 
 export function ProjectQuestionnaire() {
   const [submitted, setSubmitted] = useState(false);
-  const { closeModal } = useContactModal();
+  const { closeModal, context } = useContactModal();
   const { trackConversion } = useAnalytics();
   
   const {
@@ -80,7 +80,13 @@ export function ProjectQuestionnaire() {
       const response = await fetch('/api/contact/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, type: 'questionnaire' }),
+        body: JSON.stringify({ 
+          ...data, 
+          type: 'questionnaire',
+          service: context?.service,
+          tier: context?.tier,
+          price: context?.price,
+        }),
       });
 
       if (response.ok) {

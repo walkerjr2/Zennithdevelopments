@@ -20,7 +20,7 @@ type FormData = z.infer<typeof schema>;
 
 export function QuickContactForm() {
   const [submitted, setSubmitted] = useState(false);
-  const { closeModal } = useContactModal();
+  const { closeModal, context } = useContactModal();
   const { trackConversion } = useAnalytics();
   
   const {
@@ -36,7 +36,13 @@ export function QuickContactForm() {
       const response = await fetch('/api/contact/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, type: 'quick_contact' }),
+        body: JSON.stringify({ 
+          ...data, 
+          type: 'quick_contact',
+          service: context?.service,
+          tier: context?.tier,
+          price: context?.price,
+        }),
       });
 
       if (response.ok) {

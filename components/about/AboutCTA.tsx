@@ -17,7 +17,7 @@ export function AboutCTA() {
 
   const handleScheduleCall = () => {
     trackEvent('cta_click', { location: 'about_page_cta', type: 'schedule_call' });
-    openModal('quick', { source: 'about' });
+    openModal('calendar', { source: 'about' });
   };
 
   return (

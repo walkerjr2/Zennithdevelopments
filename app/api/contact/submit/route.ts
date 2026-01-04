@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createAssessment } from '@/lib/db-hybrid';
 import { sendCalculatorEmails } from '@/lib/send-calculator-emails';
 import { sendCalculatorEmailsViaEmailJS } from '@/lib/send-calculator-emails-emailjs';
+import { sendAssessmentEmails } from '@/lib/send-assessment-emails';
 
 export async function POST(request: NextRequest) {
   try {
@@ -11,8 +12,8 @@ export async function POST(request: NextRequest) {
     // Log the submission
     console.log('Contact submission:', { type, data, timestamp: new Date().toISOString() });
 
-    // Save to database if it's a project assessment, questionnaire, or cost calculator
-    if (type === 'project-assessment' || type === 'assessment' || type === 'questionnaire' || type === 'cost-calculator') {
+    // Save to database if it's a project assessment, questionnaire, quick contact, or cost calculator
+    if (type === 'project-assessment' || type === 'assessment' || type === 'questionnaire' || type === 'quick_contact' || type === 'cost-calculator') {
       try {
         const assessment = await createAssessment({
           clientName: data.name || data.clientName || 'Unknown',
@@ -48,13 +49,14 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Send email notifications for calculator submissions
+    // Send email notifications
     console.log('🔍 Type:', type);
-    console.log('🔍 Using EmailJS for email notifications');
+    console.log('🔍 Sending email notifications...');
     
     if (type === 'cost-calculator') {
+      // Calculator submissions - detailed email with estimate
       try {
-        console.log('📧 Attempting to send calculator emails via EmailJS...');
+        console.log('📧 Attempting to send calculator emails...');
         
         const emailResults = await sendCalculatorEmailsViaEmailJS({
           name: data.name,
@@ -69,7 +71,7 @@ export async function POST(request: NextRequest) {
           message: data.message,
         });
 
-        console.log('📧 Email notification results:', emailResults);
+        console.log('📧 Calculator email results:', emailResults);
         
         if (!emailResults.clientEmail.success) {
           console.warn('⚠️ Client email failed:', emailResults.clientEmail.error);
@@ -78,7 +80,41 @@ export async function POST(request: NextRequest) {
           console.warn('⚠️ Admin email failed:', emailResults.adminEmail.error);
         }
       } catch (emailError) {
-        console.error('❌ Failed to send email notifications:', emailError);
+        console.error('❌ Failed to send calculator emails:', emailError);
+        // Don't fail the request if emails fail - user already submitted successfully
+      }
+    } else if (type === 'project-assessment' || type === 'assessment' || type === 'questionnaire' || type === 'quick_contact') {
+      // Project assessment submissions - simpler email
+      try {
+        console.log('📧 Attempting to send assessment emails...');
+        
+        const emailResults = await sendAssessmentEmails({
+          name: data.name || data.clientName,
+          email: data.email,
+          phone: data.phone,
+          company: data.company,
+          projectType: data.projectType || data.type || 'Quick Contact Inquiry',
+          budget: data.budget,
+          timeline: data.timeline,
+          description: data.description || data.message,
+          features: data.goals || data.features,
+          currentWebsite: data.currentWebsite || data.website,
+          hearAbout: data.hearAbout,
+          service: data.service,
+          tier: data.tier,
+          price: data.price,
+        });
+
+        console.log('📧 Assessment email results:', emailResults);
+        
+        if (!emailResults.clientEmail.success) {
+          console.warn('⚠️ Client email failed:', emailResults.clientEmail.error);
+        }
+        if (!emailResults.adminEmail.success) {
+          console.warn('⚠️ Admin email failed:', emailResults.adminEmail.error);
+        }
+      } catch (emailError) {
+        console.error('❌ Failed to send assessment emails:', emailError);
         // Don't fail the request if emails fail - user already submitted successfully
       }
     }

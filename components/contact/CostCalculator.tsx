@@ -1,10 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
 import { useAnalytics } from '@/hooks/useAnalytics';
 import { useContactModal } from '@/hooks/useContactModal';
+import { trackCalculatorEvent, trackConversion } from '@/lib/firebase';
 import { 
   CurrencyDollarIcon, 
   CalendarIcon, 
@@ -53,6 +54,11 @@ export function CostCalculator() {
   const { trackEvent } = useAnalytics();
   const { closeModal } = useContactModal();
 
+  // Track calculator opened
+  useEffect(() => {
+    trackCalculatorEvent('opened', { source: 'modal' });
+  }, []);
+
   const selectedProject = projectTypes.find((p) => p.value === projectType);
   
   const calculateCost = () => {
@@ -84,6 +90,15 @@ export function CostCalculator() {
       projectType,
       features: selectedFeatures.length,
       estimatedCost: calculateCost(),
+    });
+    
+    // Firebase Analytics
+    trackCalculatorEvent('estimate_calculated', {
+      project_type: projectType,
+      total_cost: calculateCost(),
+      total_weeks: calculateTimeline(),
+      features_count: selectedFeatures.length,
+      pages: pages
     });
   };
 
@@ -142,6 +157,14 @@ export function CostCalculator() {
           projectType,
           estimatedCost: calculateCost(),
           source: 'calculator'
+        });
+        
+        // Firebase Analytics - Track conversion
+        trackConversion('calculator_submission', calculateCost());
+        trackCalculatorEvent('form_submitted', {
+          project_type: projectType,
+          estimated_cost: calculateCost(),
+          has_company: !!company
         });
         
         // Close modal after 2 seconds

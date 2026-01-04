@@ -19,8 +19,8 @@ export async function sendCalculatorEmailsViaEmailJS(data: CalculatorEmailData) 
   };
 
   const resendApiKey = process.env.RESEND_API_KEY;
-  const fromEmail = 'onboarding@resend.dev'; // Resend's test email
-  const adminEmail = 'zennithdevelopments@gmail.com';
+  const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
+  const adminEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'zennithdevelopments@gmail.com';
 
   if (!resendApiKey) {
     console.error('❌ RESEND_API_KEY missing in environment variables');
@@ -28,6 +28,9 @@ export async function sendCalculatorEmailsViaEmailJS(data: CalculatorEmailData) 
   }
 
   console.log('📧 Starting email sending with Resend REST API...');
+  console.log('📧 FROM:', fromEmail);
+  console.log('📧 TO (client):', data.email);
+  console.log('📧 TO (admin):', adminEmail);
   console.log('📧 Sending to client:', data.email);
   console.log('📧 Admin email:', adminEmail);
 

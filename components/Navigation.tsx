@@ -7,6 +7,7 @@ import { Logo } from './Logo';
 import { Button } from './ui/Button';
 import { useContactModal } from '@/hooks/useContactModal';
 import { useAnalytics } from '@/hooks/useAnalytics';
+import ThemeToggle from './ThemeToggle';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -86,15 +87,17 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* CTA Button (Desktop) */}
-          <div className="hidden md:block">
+          {/* CTA Button & Theme Toggle (Desktop) */}
+          <div className="hidden md:flex items-center gap-4">
+            <ThemeToggle />
             <Button variant="primary" onClick={handleGetStarted}>
               Get Started
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-3">
+            <ThemeToggle />
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

@@ -7,22 +7,40 @@ export default function ThemeToggle() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [mounted, setMounted] = useState(false);
 
+  // Apply theme to document
+  const applyTheme = (newTheme: 'light' | 'dark') => {
+    const root = document.documentElement;
+    const body = document.body;
+    
+    // Remove both classes first
+    root.classList.remove('light', 'dark');
+    body.classList.remove('light', 'dark');
+    
+    // Add the new theme class
+    root.classList.add(newTheme);
+    body.classList.add(newTheme);
+    
+    // Update color scheme
+    root.style.colorScheme = newTheme;
+    body.style.colorScheme = newTheme;
+    
+    console.log('Theme applied:', newTheme);
+  };
+
   // Wait until mounted to avoid hydration mismatch
   useEffect(() => {
     setMounted(true);
     const savedTheme = (localStorage.getItem('theme') as 'light' | 'dark') || 'light';
     setTheme(savedTheme);
+    applyTheme(savedTheme);
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
+    console.log('Toggling theme from', theme, 'to', newTheme);
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
-    
-    // Update DOM
-    document.documentElement.classList.remove('light', 'dark');
-    document.documentElement.classList.add(newTheme);
-    document.documentElement.style.colorScheme = newTheme;
+    applyTheme(newTheme);
   };
 
   // Don't render until mounted to avoid hydration issues

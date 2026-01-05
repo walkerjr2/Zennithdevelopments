@@ -1,10 +1,28 @@
 @import "tailwindcss";
 
-/* Smooth theme transitions */
-* {
-  transition-property: background-color, border-color, color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
+/* Configure Tailwind dark mode */
+@variant dark (.dark &);
+
+/* Enhanced Light Mode - Premium Look */
+:root {
+  /* Light mode gets subtle gradient background */
+  --light-bg-gradient: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* Improve light mode backgrounds with subtle gradients */
+body:not(.dark) {
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+  background-attachment: fixed;
+}
+
+/* Add subtle shadows and borders in light mode for better definition */
+:not(.dark) .bg-white {
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+:not(.dark) .bg-slate-50 {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid rgba(226, 232, 240, 0.5);
 }
 
 /* ZennithDevelopments Premium Design System V2 */

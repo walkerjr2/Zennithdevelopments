@@ -115,7 +115,7 @@ export function ProjectQuestionnaire() {
         <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
           Thank You!
         </h3>
-        <p className="text-slate-600 dark:text-slate-300">
+        <p className="text-slate-600 dark:text-slate-400">
           We'll review your information and get back to you within 24 hours.
         </p>
       </motion.div>
@@ -127,7 +127,7 @@ export function ProjectQuestionnaire() {
       <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
         Project Assessment
       </h3>
-      <p className="text-slate-600 dark:text-slate-300 mb-6">
+      <p className="text-slate-600 dark:text-slate-400 mb-6">
         Tell us about your project so we can provide the best recommendations.
       </p>
 
@@ -135,7 +135,7 @@ export function ProjectQuestionnaire() {
         {/* Personal Info */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+            <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
               Full Name *
             </label>
             <input
@@ -150,7 +150,7 @@ export function ProjectQuestionnaire() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+            <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
               Email *
             </label>
             <input
@@ -166,7 +166,7 @@ export function ProjectQuestionnaire() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+          <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
             Phone Number *
           </label>
           <input
@@ -182,7 +182,7 @@ export function ProjectQuestionnaire() {
 
         {/* Project Details */}
         <div>
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+          <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
             Project Type *
           </label>
           <select
@@ -203,7 +203,7 @@ export function ProjectQuestionnaire() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+            <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
               Budget Range *
             </label>
             <select
@@ -223,7 +223,7 @@ export function ProjectQuestionnaire() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+            <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
               Timeline *
             </label>
             <select
@@ -244,7 +244,7 @@ export function ProjectQuestionnaire() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+          <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
             Current Website (if any)
           </label>
           <input
@@ -256,7 +256,7 @@ export function ProjectQuestionnaire() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
+          <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-3">
             Project Goals * (Select all that apply)
           </label>
           <div className="grid grid-cols-2 gap-3">
@@ -268,7 +268,7 @@ export function ProjectQuestionnaire() {
                   {...register('goals')}
                   className="w-4 h-4 rounded border-slate-300 text-zd-royal-blue focus:ring-zd-royal-blue"
                 />
-                <span className="text-sm text-slate-700 dark:text-slate-300">{goal}</span>
+                <span className="text-sm text-slate-600 dark:text-slate-400">{goal}</span>
               </label>
             ))}
           </div>
@@ -278,7 +278,7 @@ export function ProjectQuestionnaire() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+          <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
             Project Description *
           </label>
           <textarea
@@ -293,7 +293,7 @@ export function ProjectQuestionnaire() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+          <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
             How did you hear about us?
           </label>
           <input

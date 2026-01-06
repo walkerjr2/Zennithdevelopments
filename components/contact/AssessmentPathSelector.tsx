@@ -83,11 +83,11 @@ export function AssessmentPathSelector() {
               {option.title}
             </h3>
             
-            <p className="text-slate-600 dark:text-slate-300 mb-4">
+            <p className="text-slate-600 dark:text-slate-400 mb-4">
               {option.description}
             </p>
 
-            <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 mb-4">
+            <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-4">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
@@ -96,7 +96,7 @@ export function AssessmentPathSelector() {
 
             {/* Best For */}
             <div className="space-y-2">
-              <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">Perfect if you:</p>
+              <p className="text-sm font-semibold text-slate-700 dark:text-slate-400">Perfect if you:</p>
               <ul className="space-y-1">
                 {option.bestFor.map((item) => (
                   <li key={item} className="flex items-start text-sm text-slate-600 dark:text-slate-400">
@@ -114,7 +114,7 @@ export function AssessmentPathSelector() {
         ))}
       </div>
 
-      <p className="text-center text-sm text-slate-500 dark:text-slate-400">
+      <p className="text-center text-sm text-slate-600 dark:text-slate-400">
         Need help deciding?{' '}
         <button
           onClick={() => {

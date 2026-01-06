@@ -80,7 +80,7 @@ export function Navigation() {
                 onClick={(e) => {
                   handleNavClick(item.name, item.href, e);
                 }}
-                className="text-slate-700 dark:text-slate-300 hover:text-zd-royal-blue dark:hover:text-zd-electric-cyan transition-colors duration-200 font-medium"
+                className="text-slate-600 dark:text-slate-400 hover:text-zd-royal-blue dark:hover:text-zd-electric-cyan transition-colors duration-200 font-medium"
               >
                 {item.name}
               </a>
@@ -101,7 +101,7 @@ export function Navigation() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              className="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             >
               <span className="sr-only">Open menu</span>
               {mobileMenuOpen ? (
@@ -131,7 +131,7 @@ export function Navigation() {
                   onClick={(e) => {
                     handleNavClick(item.name, item.href, e);
                   }}
-                  className="block text-lg text-slate-700 dark:text-slate-300 hover:text-zd-royal-blue dark:hover:text-zd-electric-cyan transition-colors font-medium"
+                  className="block text-lg text-slate-600 dark:text-slate-400 hover:text-zd-royal-blue dark:hover:text-zd-electric-cyan transition-colors font-medium"
                 >
                   {item.name}
                 </a>

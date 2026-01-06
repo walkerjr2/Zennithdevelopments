@@ -95,7 +95,7 @@ export function Services() {
                 <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                 
                 {/* Icon */}
-                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${service.color} mb-6`}>
+                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${service.color} mb-6 shadow-lg`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
 
@@ -103,7 +103,7 @@ export function Services() {
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">
                   {service.title}
                 </h3>
-                <p className="text-slate-600 dark:text-slate-300 mb-6">
+                <p className="text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
@@ -111,7 +111,7 @@ export function Services() {
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                      <svg className="w-5 h-5 text-zd-electric-cyan mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-5 h-5 text-zd-electric-cyan mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       {feature}
@@ -120,7 +120,7 @@ export function Services() {
                 </ul>
 
                 {/* CTA - Visual indicator only */}
-                <div className="flex items-center gap-1 text-zd-royal-blue dark:text-zd-electric-cyan font-semibold">
+                <div className="flex items-center gap-1 text-zd-royal-blue dark:text-zd-electric-cyan font-semibold group-hover:gap-2 transition-all">
                   <span>Learn More</span>
                   <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </div>

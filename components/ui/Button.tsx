@@ -14,10 +14,10 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const buttonVariants = {
-  primary: 'bg-gradient-primary text-white shadow-glow hover:bg-gradient-primary-hover hover:shadow-glow-lg',
-  secondary: 'bg-transparent border-2 border-zd-electric-cyan text-zd-electric-cyan hover:bg-zd-electric-cyan/10',
-  tertiary: 'bg-transparent text-zd-royal-blue hover:text-zd-electric-cyan underline underline-offset-4',
-  ghost: 'bg-transparent hover:bg-slate-100 dark:hover:bg-slate-800',
+  primary: 'bg-gradient-to-r from-zd-electric-cyan to-zd-royal-blue text-white shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]',
+  secondary: 'bg-white dark:bg-slate-800 border-2 border-zd-royal-blue dark:border-zd-electric-cyan text-zd-royal-blue dark:text-zd-electric-cyan hover:bg-zd-royal-blue/5 dark:hover:bg-zd-electric-cyan/10',
+  tertiary: 'bg-transparent text-zd-royal-blue dark:text-zd-electric-cyan hover:text-zd-electric-cyan dark:hover:text-zd-bright-cyan underline underline-offset-4',
+  ghost: 'bg-transparent text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800',
 };
 
 const buttonSizes = {

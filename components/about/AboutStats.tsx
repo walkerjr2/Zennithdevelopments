@@ -136,7 +136,7 @@ export function AboutStats() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="mt-16 text-center"
         >
-          <p className="text-sm text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
+          <p className="text-sm text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
             * All metrics based on completed projects as of December 2025. Individual results may vary 
             depending on project scope, industry, and business goals.
           </p>

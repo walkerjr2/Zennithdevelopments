@@ -47,7 +47,7 @@ export function FAQ() {
   };
 
   return (
-    <section className="py-24 bg-white dark:bg-slate-900">
+    <section className="py-24 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -74,11 +74,11 @@ export function FAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="bg-slate-50 dark:bg-slate-800 rounded-2xl overflow-hidden"
+              className="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-200"
+                className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors duration-200"
               >
                 <span className="text-lg font-semibold text-slate-900 dark:text-white pr-8">
                   {faq.question}
@@ -99,7 +99,7 @@ export function FAQ() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-5 text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <div className="px-6 pb-5 text-slate-700 dark:text-slate-300 leading-relaxed">
                       {faq.answer}
                     </div>
                   </motion.div>
@@ -115,12 +115,12 @@ export function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-12 text-center p-8 bg-slate-50 dark:bg-slate-800 rounded-2xl"
+          className="mt-12 text-center p-8 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg"
         >
-          <p className="text-lg text-slate-700 dark:text-slate-300 mb-2">
+          <p className="text-lg text-slate-700 dark:text-white mb-2 font-semibold">
             Still have questions?
           </p>
-          <p className="text-slate-600 dark:text-slate-400 mb-6">
+          <p className="text-slate-600 dark:text-slate-300 mb-6">
             We are here to help. Schedule a free consultation to discuss your project.
           </p>
           <a

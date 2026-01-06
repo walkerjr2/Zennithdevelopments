@@ -106,14 +106,14 @@ export function ContactPathSelector() {
                   {path.description}
                 </p>
 
-                <div className="flex items-center gap-4 text-xs text-slate-500 dark:text-slate-500 mb-3">
+                <div className="flex items-center gap-4 text-xs text-slate-600 dark:text-slate-400 mb-3">
                   <span className="flex items-center gap-1">
                     ⏱ {path.timeEstimate}
                   </span>
                 </div>
 
                 <div className="space-y-1">
-                  <p className="text-xs font-semibold text-slate-700 dark:text-slate-300">
+                  <p className="text-xs font-semibold text-slate-600 dark:text-slate-400">
                     Best for:
                   </p>
                   <ul className="text-xs text-slate-600 dark:text-slate-400 space-y-1">
@@ -133,7 +133,7 @@ export function ContactPathSelector() {
         ))}
       </div>
 
-      <p className="text-center text-sm text-slate-500 dark:text-slate-400">
+      <p className="text-center text-sm text-slate-600 dark:text-slate-400">
         Not sure which path to choose?{' '}
         <button
           onClick={() => handlePathSelection('calendar')}

@@ -239,7 +239,7 @@ export default function EcommercePage() {
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
                     {benefit.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-300">
+                  <p className="text-slate-600 dark:text-slate-400">
                     {benefit.description}
                   </p>
                 </motion.div>
@@ -260,7 +260,7 @@ export default function EcommercePage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 Choose Your Platform
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                 We work with multiple platforms to find the best fit for your business
               </p>
             </motion.div>
@@ -278,7 +278,7 @@ export default function EcommercePage() {
                   <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">
                     {platform.name}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-300 mb-6">
+                  <p className="text-slate-600 dark:text-slate-400 mb-6">
                     {platform.description}
                   </p>
                   <div className="space-y-2">
@@ -286,7 +286,7 @@ export default function EcommercePage() {
                     {platform.bestFor.map((item) => (
                       <div key={item} className="flex items-start gap-2">
                         <CheckCircleIcon className="w-5 h-5 text-zd-electric-cyan flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-slate-600 dark:text-slate-300">{item}</span>
+                        <span className="text-sm text-slate-600 dark:text-slate-400">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -308,7 +308,7 @@ export default function EcommercePage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 E-commerce Features
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                 Everything you need to run a successful online store
               </p>
             </motion.div>
@@ -343,7 +343,7 @@ export default function EcommercePage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 Our E-commerce Process
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                 From concept to launch in 6 simple steps
               </p>
             </motion.div>
@@ -364,7 +364,7 @@ export default function EcommercePage() {
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-300">
+                  <p className="text-slate-600 dark:text-slate-400">
                     {step.description}
                   </p>
                 </motion.div>
@@ -385,7 +385,7 @@ export default function EcommercePage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 E-commerce Investment
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-4">
+              <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-4">
                 Start selling online with flexible payment options
               </p>
               <p className="text-sm text-slate-500 dark:text-slate-400">
@@ -406,7 +406,7 @@ export default function EcommercePage() {
                   Risk-Free Store Launch
                 </h3>
               </div>
-              <p className="text-center text-slate-700 dark:text-slate-300">
+              <p className="text-center text-slate-600 dark:text-slate-400">
                 Your store works perfectly before launch, or we keep working until it does - at no extra cost
               </p>
             </motion.div>
@@ -421,17 +421,17 @@ export default function EcommercePage() {
               <div className="text-center p-6 bg-white dark:bg-slate-900 rounded-xl">
                 <CheckCircleIcon className="w-12 h-12 mx-auto text-purple-500 mb-3" />
                 <h4 className="font-bold text-slate-900 dark:text-white mb-2">Free Store Audit</h4>
-                <p className="text-sm text-slate-600 dark:text-slate-300">Pre-launch optimization included</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Pre-launch optimization included</p>
               </div>
               <div className="text-center p-6 bg-white dark:bg-slate-900 rounded-xl">
                 <CheckCircleIcon className="w-12 h-12 mx-auto text-purple-500 mb-3" />
                 <h4 className="font-bold text-slate-900 dark:text-white mb-2">Payment Plans</h4>
-                <p className="text-sm text-slate-600 dark:text-slate-300">Start selling before paying in full</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Start selling before paying in full</p>
               </div>
               <div className="text-center p-6 bg-white dark:bg-slate-900 rounded-xl">
                 <CheckCircleIcon className="w-12 h-12 mx-auto text-purple-500 mb-3" />
                 <h4 className="font-bold text-slate-900 dark:text-white mb-2">Store Training</h4>
-                <p className="text-sm text-slate-600 dark:text-slate-300">Learn to manage products & orders</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Learn to manage products & orders</p>
               </div>
             </motion.div>
 
@@ -448,15 +448,15 @@ export default function EcommercePage() {
               <div className="grid md:grid-cols-3 gap-4 text-center">
                 <div>
                   <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">3-6 months</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-300">average time to ROI</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">average time to ROI</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">$2,800</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-300">most popular package</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">most popular package</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">24/7</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-300">your store sells nonstop</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">your store sells nonstop</div>
                 </div>
               </div>
             </motion.div>
@@ -503,14 +503,14 @@ export default function EcommercePage() {
                       </div>
                     )}
                   </div>
-                  <p className="text-slate-600 dark:text-slate-300 mb-6">
+                  <p className="text-slate-600 dark:text-slate-400 mb-6">
                     {tier.description}
                   </p>
                   <ul className="space-y-3 mb-8">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-2">
                         <CheckCircleIcon className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-slate-600 dark:text-slate-300 text-sm">
+                        <span className="text-slate-600 dark:text-slate-400 text-sm">
                           {feature}
                         </span>
                       </li>

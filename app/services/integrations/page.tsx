@@ -276,7 +276,7 @@ export default function IntegrationsPage() {
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
                     {benefit.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-300">
+                  <p className="text-slate-600 dark:text-slate-400">
                     {benefit.description}
                   </p>
                 </motion.div>
@@ -297,7 +297,7 @@ export default function IntegrationsPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 Types of Integrations We Build
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                 Connect any system to streamline your workflows
               </p>
             </motion.div>
@@ -315,14 +315,14 @@ export default function IntegrationsPage() {
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">
                     {type.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-300 mb-4">
+                  <p className="text-slate-600 dark:text-slate-400 mb-4">
                     {type.description}
                   </p>
                   <ul className="space-y-2">
                     {type.examples.map((example) => (
                       <li key={example} className="flex items-start gap-2 text-sm">
                         <CheckCircleIcon className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-slate-600 dark:text-slate-300">{example}</span>
+                        <span className="text-slate-600 dark:text-slate-400">{example}</span>
                       </li>
                     ))}
                   </ul>
@@ -344,7 +344,7 @@ export default function IntegrationsPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 Real-World Use Cases
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                 See how integrations can transform your business operations
               </p>
             </motion.div>
@@ -362,7 +362,7 @@ export default function IntegrationsPage() {
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">
                     {useCase.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-300 mb-4">
+                  <p className="text-slate-600 dark:text-slate-400 mb-4">
                     {useCase.description}
                   </p>
                   <div className="flex items-center gap-2 text-orange-600 dark:text-orange-400">
@@ -387,7 +387,7 @@ export default function IntegrationsPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 Integration Capabilities
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                 Comprehensive API and integration services
               </p>
             </motion.div>
@@ -422,7 +422,7 @@ export default function IntegrationsPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 Our Integration Process
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                 A systematic approach to reliable integrations
               </p>
             </motion.div>
@@ -443,7 +443,7 @@ export default function IntegrationsPage() {
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-300">
+                  <p className="text-slate-600 dark:text-slate-400">
                     {step.description}
                   </p>
                 </motion.div>
@@ -464,7 +464,7 @@ export default function IntegrationsPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 Integration Investment
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-4">
+              <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-4">
                 Automate workflows and save time with flexible pricing
               </p>
               <p className="text-sm text-slate-500 dark:text-slate-400">
@@ -485,7 +485,7 @@ export default function IntegrationsPage() {
                   Integration Guarantee
                 </h3>
               </div>
-              <p className="text-center text-slate-700 dark:text-slate-300">
+              <p className="text-center text-slate-600 dark:text-slate-400">
                 Your systems will communicate flawlessly, or we'll fix it free - no excuses
               </p>
             </motion.div>
@@ -500,17 +500,17 @@ export default function IntegrationsPage() {
               <div className="text-center p-6 bg-slate-50 dark:bg-slate-800 rounded-xl">
                 <CheckCircleIcon className="w-12 h-12 mx-auto text-orange-500 mb-3" />
                 <h4 className="font-bold text-slate-900 dark:text-white mb-2">Free System Audit</h4>
-                <p className="text-sm text-slate-600 dark:text-slate-300">Review your current workflow first</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Review your current workflow first</p>
               </div>
               <div className="text-center p-6 bg-slate-50 dark:bg-slate-800 rounded-xl">
                 <CheckCircleIcon className="w-12 h-12 mx-auto text-orange-500 mb-3" />
                 <h4 className="font-bold text-slate-900 dark:text-white mb-2">Flexible Terms</h4>
-                <p className="text-sm text-slate-600 dark:text-slate-300">Pay as systems start talking</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Pay as systems start talking</p>
               </div>
               <div className="text-center p-6 bg-slate-50 dark:bg-slate-800 rounded-xl">
                 <CheckCircleIcon className="w-12 h-12 mx-auto text-orange-500 mb-3" />
                 <h4 className="font-bold text-slate-900 dark:text-white mb-2">Ongoing Monitoring</h4>
-                <p className="text-sm text-slate-600 dark:text-slate-300">60 days of uptime monitoring</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">60 days of uptime monitoring</p>
               </div>
             </motion.div>
 
@@ -527,15 +527,15 @@ export default function IntegrationsPage() {
               <div className="grid md:grid-cols-3 gap-4 text-center">
                 <div>
                   <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">10+ hrs/wk</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-300">manual work eliminated</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">manual work eliminated</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">2-3 months</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-300">typical time to ROI</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">typical time to ROI</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">$3,800</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-300">average investment</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">average investment</div>
                 </div>
               </div>
             </motion.div>
@@ -582,14 +582,14 @@ export default function IntegrationsPage() {
                       </div>
                     )}
                   </div>
-                  <p className="text-slate-600 dark:text-slate-300 mb-6">
+                  <p className="text-slate-600 dark:text-slate-400 mb-6">
                     {tier.description}
                   </p>
                   <ul className="space-y-3 mb-8">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-2">
                         <CheckCircleIcon className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-slate-600 dark:text-slate-300 text-sm">
+                        <span className="text-slate-600 dark:text-slate-400 text-sm">
                           {feature}
                         </span>
                       </li>

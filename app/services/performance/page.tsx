@@ -302,7 +302,7 @@ export default function PerformancePage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 Why Optimize Your Website?
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                 Performance directly impacts your bottom line
               </p>
             </motion.div>
@@ -323,7 +323,7 @@ export default function PerformancePage() {
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
                     {benefit.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-300">
+                  <p className="text-slate-600 dark:text-slate-400">
                     {benefit.description}
                   </p>
                 </motion.div>
@@ -344,7 +344,7 @@ export default function PerformancePage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 Expected Results
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                 Real improvements you can measure
               </p>
             </motion.div>
@@ -365,7 +365,7 @@ export default function PerformancePage() {
                   <div className="text-lg font-semibold text-slate-900 dark:text-white mb-1">
                     {metric.label}
                   </div>
-                  <div className="text-sm text-slate-600 dark:text-slate-300">
+                  <div className="text-sm text-slate-600 dark:text-slate-400">
                     {metric.description}
                   </div>
                 </motion.div>
@@ -386,7 +386,7 @@ export default function PerformancePage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 What We Optimize
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                 Comprehensive improvements across all critical areas
               </p>
             </motion.div>
@@ -404,14 +404,14 @@ export default function PerformancePage() {
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">
                     {area.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-300 mb-4">
+                  <p className="text-slate-600 dark:text-slate-400 mb-4">
                     {area.description}
                   </p>
                   <ul className="space-y-2">
                     {area.improvements.map((improvement) => (
                       <li key={improvement} className="flex items-start gap-2 text-sm">
                         <CheckCircleIcon className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-slate-600 dark:text-slate-300">{improvement}</span>
+                        <span className="text-slate-600 dark:text-slate-400">{improvement}</span>
                       </li>
                     ))}
                   </ul>
@@ -433,7 +433,7 @@ export default function PerformancePage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 Our Optimization Process
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                 Systematic approach to measurable improvements
               </p>
             </motion.div>
@@ -454,7 +454,7 @@ export default function PerformancePage() {
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-300">
+                  <p className="text-slate-600 dark:text-slate-400">
                     {step.description}
                   </p>
                 </motion.div>
@@ -475,7 +475,7 @@ export default function PerformancePage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 Optimization Investment
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-4">
+              <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-4">
                 Boost conversions and rankings with measurable results
               </p>
               <p className="text-sm text-slate-500 dark:text-slate-400">
@@ -496,7 +496,7 @@ export default function PerformancePage() {
                   Performance Guarantee
                 </h3>
               </div>
-              <p className="text-center text-slate-700 dark:text-slate-300">
+              <p className="text-center text-slate-600 dark:text-slate-400">
                 See measurable improvements in speed and rankings, or get a full refund
               </p>
             </motion.div>
@@ -511,17 +511,17 @@ export default function PerformancePage() {
               <div className="text-center p-6 bg-white dark:bg-slate-900 rounded-xl">
                 <CheckCircleIcon className="w-12 h-12 mx-auto text-green-500 mb-3" />
                 <h4 className="font-bold text-slate-900 dark:text-white mb-2">Free Audit</h4>
-                <p className="text-sm text-slate-600 dark:text-slate-300">Comprehensive site analysis first</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Comprehensive site analysis first</p>
               </div>
               <div className="text-center p-6 bg-white dark:bg-slate-900 rounded-xl">
                 <CheckCircleIcon className="w-12 h-12 mx-auto text-green-500 mb-3" />
                 <h4 className="font-bold text-slate-900 dark:text-white mb-2">Pay Over Time</h4>
-                <p className="text-sm text-slate-600 dark:text-slate-300">See results before final payment</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">See results before final payment</p>
               </div>
               <div className="text-center p-6 bg-white dark:bg-slate-900 rounded-xl">
                 <CheckCircleIcon className="w-12 h-12 mx-auto text-green-500 mb-3" />
                 <h4 className="font-bold text-slate-900 dark:text-white mb-2">Before/After Report</h4>
-                <p className="text-sm text-slate-600 dark:text-slate-300">Proof of improvement metrics</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Proof of improvement metrics</p>
               </div>
             </motion.div>
 
@@ -538,15 +538,15 @@ export default function PerformancePage() {
               <div className="grid md:grid-cols-3 gap-4 text-center">
                 <div>
                   <div className="text-2xl font-bold text-green-600 dark:text-green-400">40-60%</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-300">faster load times</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">faster load times</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-green-600 dark:text-green-400">25%</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-300">conversion increase</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">conversion increase</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-green-600 dark:text-green-400">+15-30</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-300">SEO score points</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">SEO score points</div>
                 </div>
               </div>
             </motion.div>
@@ -593,14 +593,14 @@ export default function PerformancePage() {
                       </div>
                     )}
                   </div>
-                  <p className="text-slate-600 dark:text-slate-300 mb-6">
+                  <p className="text-slate-600 dark:text-slate-400 mb-6">
                     {tier.description}
                   </p>
                   <ul className="space-y-3 mb-8">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-2">
                         <CheckCircleIcon className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-slate-600 dark:text-slate-300 text-sm">
+                        <span className="text-slate-600 dark:text-slate-400 text-sm">
                           {feature}
                         </span>
                       </li>

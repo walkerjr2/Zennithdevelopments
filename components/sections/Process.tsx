@@ -127,18 +127,18 @@ export function Process() {
                       </div>
                     </div>
                     
-                    <p className="text-slate-600 dark:text-slate-300 mb-6">
+                    <p className="text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
                       {phase.description}
                     </p>
 
                     <div className="space-y-3">
-                      <div className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
+                      <div className="text-sm font-semibold text-slate-700 dark:text-white mb-2">
                         Key Deliverables:
                       </div>
                       {phase.deliverables.map((deliverable) => (
                         <div key={deliverable} className="flex items-start gap-2">
                           <CheckCircleIcon className="w-5 h-5 text-zd-electric-cyan flex-shrink-0 mt-0.5" />
-                          <span className="text-slate-600 dark:text-slate-400">
+                          <span className="text-slate-600 dark:text-slate-300">
                             {deliverable}
                           </span>
                         </div>
@@ -173,7 +173,7 @@ export function Process() {
             <div className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-primary mb-2">
               2-3 Weeks
             </div>
-            <div className="text-slate-600 dark:text-slate-400">
+            <div className="text-slate-600 dark:text-slate-300">
               Minimum Project Timeline
             </div>
           </div>
@@ -181,7 +181,7 @@ export function Process() {
             <div className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-primary mb-2">
               97%
             </div>
-            <div className="text-slate-600 dark:text-slate-400">
+            <div className="text-slate-600 dark:text-slate-300">
               On-Time Delivery Rate
             </div>
           </div>
@@ -189,7 +189,7 @@ export function Process() {
             <div className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-primary mb-2">
               100%
             </div>
-            <div className="text-slate-600 dark:text-slate-400">
+            <div className="text-slate-600 dark:text-slate-300">
               Client Satisfaction
             </div>
           </div>

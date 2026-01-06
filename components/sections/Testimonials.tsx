@@ -62,7 +62,7 @@ export function Testimonials() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="py-24 bg-slate-50 dark:bg-slate-950">
+    <section className="py-24 bg-gradient-to-b from-white to-slate-100 dark:from-slate-900 dark:to-slate-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -89,7 +89,7 @@ export function Testimonials() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.3 }}
-              className="bg-white dark:bg-slate-900 rounded-3xl p-8 md:p-12 shadow-2xl"
+              className="bg-white dark:bg-slate-900 rounded-3xl p-8 md:p-12 shadow-2xl border border-slate-200 dark:border-slate-800"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-6">
@@ -136,14 +136,14 @@ export function Testimonials() {
               className="p-3 rounded-full bg-white dark:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
               aria-label="Previous testimonial"
             >
-              <ChevronLeftIcon className="w-6 h-6 text-slate-700 dark:text-slate-300" />
+              <ChevronLeftIcon className="w-6 h-6 text-slate-600 dark:text-slate-400" />
             </button>
             <button
               onClick={nextTestimonial}
               className="p-3 rounded-full bg-white dark:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
               aria-label="Next testimonial"
             >
-              <ChevronRightIcon className="w-6 h-6 text-slate-700 dark:text-slate-300" />
+              <ChevronRightIcon className="w-6 h-6 text-slate-600 dark:text-slate-400" />
             </button>
           </div>
 

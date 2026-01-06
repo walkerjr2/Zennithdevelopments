@@ -81,16 +81,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark" style={{ colorScheme: 'dark' }} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Theme initialization - runs before page render
+              // Ensure dark mode stays forced
               (function() {
-                const theme = localStorage.getItem('theme') || 'light';
-                document.documentElement.classList.add(theme);
-                document.documentElement.style.colorScheme = theme;
+                document.documentElement.classList.add('dark');
+                document.documentElement.style.colorScheme = 'dark';
+                localStorage.setItem('theme', 'dark');
               })();
             `,
           }}
@@ -114,7 +114,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#0a2463" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-900 text-slate-100`}
       >
         {children}
       </body>

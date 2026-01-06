@@ -109,7 +109,7 @@ export function Portfolio() {
   };
 
   return (
-    <section id="work" className="py-24 bg-slate-50 dark:bg-slate-950">
+    <section id="work" className="py-24 bg-gradient-to-b from-slate-100 to-white dark:from-slate-950 dark:to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -139,10 +139,10 @@ export function Portfolio() {
             <button
               key={category}
               onClick={() => handleCategoryChange(category)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 border ${
                 activeCategory === category
-                  ? 'bg-zd-royal-blue text-white shadow-lg shadow-zd-royal-blue/30'
-                  : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700'
+                  ? 'bg-zd-royal-blue text-white shadow-lg shadow-zd-royal-blue/30 border-zd-royal-blue'
+                  : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 border-slate-200 dark:border-slate-700'
               }`}
             >
               {category}
@@ -158,7 +158,7 @@ export function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200 dark:border-slate-800"
             >
               {/* Project Image Placeholder */}
               <div className="relative h-64 bg-gradient-to-br from-zd-royal-blue to-zd-electric-cyan overflow-hidden">
@@ -172,7 +172,7 @@ export function Portfolio() {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-white p-8">
                     <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-sm opacity-80">{project.category}</p>
+                    <p className="text-sm text-white/80">{project.category}</p>
                   </div>
                 </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
@@ -202,7 +202,7 @@ export function Portfolio() {
                       <div className="text-lg font-bold text-zd-royal-blue dark:text-zd-electric-cyan">
                         {value}
                       </div>
-                      <div className="text-xs text-slate-500 dark:text-slate-400">
+                      <div className="text-xs text-slate-600 dark:text-slate-400">
                         {key}
                       </div>
                     </div>
@@ -214,7 +214,7 @@ export function Portfolio() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full"
+                      className="px-3 py-1 text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-full"
                     >
                       {tag}
                     </span>

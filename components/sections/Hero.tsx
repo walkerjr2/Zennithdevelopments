@@ -59,7 +59,7 @@ export function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-zd-electric-cyan opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-zd-electric-cyan"></span>
               </span>
-              <span className="text-sm font-semibold bg-gradient-to-r from-zd-royal-blue to-zd-deep-navy bg-clip-text text-transparent dark:from-zd-electric-cyan dark:to-zd-bright-cyan">
+              <span className="text-sm font-semibold text-slate-900 dark:text-zd-electric-cyan">
                 Accepting New Projects • Fast Turnaround
               </span>
               <SparklesIcon className="w-4 h-4 text-zd-electric-cyan" />
@@ -148,7 +148,7 @@ export function Hero() {
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-              className="flex flex-col items-center gap-3 text-slate-400 hover:text-zd-electric-cyan transition-colors cursor-pointer"
+              className="flex flex-col items-center gap-3 text-slate-600 dark:text-slate-400 hover:text-zd-royal-blue dark:hover:text-zd-electric-cyan transition-colors cursor-pointer"
               onClick={() => {
                 document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
               }}

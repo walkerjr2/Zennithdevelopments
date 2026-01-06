@@ -66,7 +66,7 @@ export function ContactModal() {
                 {/* Close Button */}
                 <button
                   onClick={closeModal}
-                  className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors p-2"
+                  className="absolute top-4 right-4 text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200 transition-colors p-2"
                   aria-label="Close modal"
                 >
                   <XMarkIcon className="w-6 h-6" />

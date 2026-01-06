@@ -53,7 +53,7 @@ export default function AdminLogin() {
             <div>
               <label
                 htmlFor="password"
-                className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2"
+                className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2"
               >
                 Admin Password
               </label>

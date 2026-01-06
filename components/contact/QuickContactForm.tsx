@@ -70,7 +70,7 @@ export function QuickContactForm() {
         <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
           Message Sent!
         </h3>
-        <p className="text-slate-600 dark:text-slate-300">
+        <p className="text-slate-600 dark:text-slate-400">
           We'll get back to you within 2 hours during business hours.
         </p>
       </motion.div>
@@ -82,13 +82,13 @@ export function QuickContactForm() {
       <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
         Quick Contact
       </h3>
-      <p className="text-slate-600 dark:text-slate-300 mb-6">
+      <p className="text-slate-600 dark:text-slate-400 mb-6">
         Send us a message and we'll respond quickly.
       </p>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div>
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+          <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
             Name *
           </label>
           <input
@@ -103,7 +103,7 @@ export function QuickContactForm() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+          <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
             Email *
           </label>
           <input
@@ -118,7 +118,7 @@ export function QuickContactForm() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+          <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
             Message *
           </label>
           <textarea

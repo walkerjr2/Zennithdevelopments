@@ -218,7 +218,7 @@ export default function WebDevelopmentPage() {
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
                     {benefit.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-300">
+                  <p className="text-slate-600 dark:text-slate-400">
                     {benefit.description}
                   </p>
                 </motion.div>
@@ -239,7 +239,7 @@ export default function WebDevelopmentPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 What's Included
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                 Comprehensive web development services with modern technologies
               </p>
             </motion.div>
@@ -274,7 +274,7 @@ export default function WebDevelopmentPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 Our Development Process
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                 A proven methodology to deliver exceptional results
               </p>
             </motion.div>
@@ -295,7 +295,7 @@ export default function WebDevelopmentPage() {
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-300">
+                  <p className="text-slate-600 dark:text-slate-400">
                     {step.description}
                   </p>
                 </motion.div>
@@ -316,7 +316,7 @@ export default function WebDevelopmentPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 Investment & Value
               </h2>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-4">
+              <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-4">
                 Transparent pricing with flexible payment plans
               </p>
               <p className="text-sm text-slate-500 dark:text-slate-400">
@@ -337,7 +337,7 @@ export default function WebDevelopmentPage() {
                   100% Satisfaction Guarantee
                 </h3>
               </div>
-              <p className="text-center text-slate-700 dark:text-slate-300">
+              <p className="text-center text-slate-600 dark:text-slate-400">
                 Not happy with the final result? We'll revise until you are - unlimited revisions included
               </p>
             </motion.div>
@@ -352,17 +352,17 @@ export default function WebDevelopmentPage() {
               <div className="text-center p-6 bg-slate-50 dark:bg-slate-800 rounded-xl">
                 <CheckCircleIcon className="w-12 h-12 mx-auto text-zd-electric-cyan mb-3" />
                 <h4 className="font-bold text-slate-900 dark:text-white mb-2">Free Consultation</h4>
-                <p className="text-sm text-slate-600 dark:text-slate-300">30-min strategy call to discuss your needs</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">30-min strategy call to discuss your needs</p>
               </div>
               <div className="text-center p-6 bg-slate-50 dark:bg-slate-800 rounded-xl">
                 <CheckCircleIcon className="w-12 h-12 mx-auto text-zd-electric-cyan mb-3" />
                 <h4 className="font-bold text-slate-900 dark:text-white mb-2">Flexible Payments</h4>
-                <p className="text-sm text-slate-600 dark:text-slate-300">Split into manageable monthly installments</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Split into manageable monthly installments</p>
               </div>
               <div className="text-center p-6 bg-slate-50 dark:bg-slate-800 rounded-xl">
                 <CheckCircleIcon className="w-12 h-12 mx-auto text-zd-electric-cyan mb-3" />
                 <h4 className="font-bold text-slate-900 dark:text-white mb-2">30-Day Support</h4>
-                <p className="text-sm text-slate-600 dark:text-slate-300">Post-launch assistance included free</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Post-launch assistance included free</p>
               </div>
             </motion.div>
 
@@ -379,15 +379,15 @@ export default function WebDevelopmentPage() {
               <div className="grid md:grid-cols-3 gap-4 text-center">
                 <div>
                   <div className="text-2xl font-bold text-zd-royal-blue dark:text-zd-electric-cyan">68%</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-300">invest $2,000-$4,000</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">invest $2,000-$4,000</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-zd-royal-blue dark:text-zd-electric-cyan">$2,800</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-300">average project cost</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">average project cost</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-zd-royal-blue dark:text-zd-electric-cyan">6 months</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-300">typical payment plan</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">typical payment plan</div>
                 </div>
               </div>
             </motion.div>
@@ -434,14 +434,14 @@ export default function WebDevelopmentPage() {
                       </div>
                     )}
                   </div>
-                  <p className="text-slate-600 dark:text-slate-300 mb-6">
+                  <p className="text-slate-600 dark:text-slate-400 mb-6">
                     {tier.description}
                   </p>
                   <ul className="space-y-3 mb-8">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-2">
                         <CheckCircleIcon className="w-5 h-5 text-zd-electric-cyan flex-shrink-0 mt-0.5" />
-                        <span className="text-slate-600 dark:text-slate-300 text-sm">
+                        <span className="text-slate-600 dark:text-slate-400 text-sm">
                           {feature}
                         </span>
                       </li>

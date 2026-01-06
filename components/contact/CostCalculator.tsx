@@ -190,14 +190,14 @@ export function CostCalculator() {
       <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
         Project Cost Calculator
       </h3>
-      <p className="text-slate-600 dark:text-slate-300 mb-6">
+      <p className="text-slate-600 dark:text-slate-400 mb-6">
         Get an instant estimate for your project
       </p>
 
       <div className="space-y-6">
         {/* Project Type */}
         <div>
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
+          <label className="block text-sm font-medium text-slate-700 dark:text-slate-400 mb-3">
             Project Type *
           </label>
           <div className="grid grid-cols-1 gap-3">
@@ -224,7 +224,7 @@ export function CostCalculator() {
 
         {/* Number of Pages */}
         <div>
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
+          <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-3">
             Number of Pages: {pages}
           </label>
           <input
@@ -235,7 +235,7 @@ export function CostCalculator() {
             onChange={(e) => setPages(parseInt(e.target.value))}
             className="w-full"
           />
-          <div className="flex justify-between text-xs text-slate-500 mt-1">
+          <div className="flex justify-between text-xs text-slate-600 dark:text-slate-400 mt-1">
             <span>1 page</span>
             <span>50+ pages</span>
           </div>
@@ -243,7 +243,7 @@ export function CostCalculator() {
 
         {/* Features */}
         <div>
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
+          <label className="block text-sm font-medium text-slate-700 dark:text-slate-400 mb-3">
             Additional Features
           </label>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -299,17 +299,17 @@ export function CostCalculator() {
                   <div className="text-3xl font-bold">
                     ${estimatedCost.toLocaleString()}
                   </div>
-                  <div className="text-sm opacity-80">Total Investment</div>
+                      <div className="text-sm text-slate-600 dark:text-slate-400">Total Investment</div>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <CalendarIcon className="w-6 h-6 mb-2" />
                   <div className="text-3xl font-bold">{estimatedWeeks}</div>
-                  <div className="text-sm opacity-80">Weeks to Launch</div>
+                      <div className="text-sm text-slate-600 dark:text-slate-400">Weeks to Launch</div>
                 </div>
               </div>
 
-              <p className="text-sm opacity-90 mb-4">
+              <p className="text-sm text-white/95 mb-4">
                 💡 Want a detailed quote? Share your contact info and we'll send you a personalized proposal within 24 hours.
               </p>
 
@@ -335,13 +335,13 @@ export function CostCalculator() {
             >
               <div className="bg-slate-50 dark:bg-slate-800 rounded-lg p-4 mb-4">
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-slate-600 dark:text-slate-300">Estimated Cost:</span>
+                  <span className="text-slate-600 dark:text-slate-400">Estimated Cost:</span>
                   <span className="font-bold text-zd-royal-blue dark:text-zd-electric-cyan text-lg">
                     ${estimatedCost.toLocaleString()}
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-sm mt-2">
-                  <span className="text-slate-600 dark:text-slate-300">Timeline:</span>
+                  <span className="text-slate-600 dark:text-slate-400">Timeline:</span>
                   <span className="font-semibold text-slate-900 dark:text-white">
                     {estimatedWeeks} weeks
                   </span>
@@ -349,11 +349,11 @@ export function CostCalculator() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                <label className="block text-sm font-medium text-slate-700 dark:text-slate-400 mb-2">
                   Full Name *
                 </label>
                 <div className="relative">
-                  <UserIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+                  <UserIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-600 dark:text-slate-400" />
                   <input
                     type="text"
                     required
@@ -366,11 +366,11 @@ export function CostCalculator() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                <label className="block text-sm font-medium text-slate-700 dark:text-slate-400 mb-2">
                   Email Address *
                 </label>
                 <div className="relative">
-                  <EnvelopeIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+                  <EnvelopeIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-600 dark:text-slate-400" />
                   <input
                     type="email"
                     required
@@ -383,11 +383,11 @@ export function CostCalculator() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                <label className="block text-sm font-medium text-slate-700 dark:text-slate-400 mb-2">
                   Phone Number
                 </label>
                 <div className="relative">
-                  <PhoneIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+                  <PhoneIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-600 dark:text-slate-400" />
                   <input
                     type="tel"
                     value={phone}
@@ -399,7 +399,7 @@ export function CostCalculator() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                <label className="block text-sm font-medium text-slate-700 dark:text-slate-400 mb-2">
                   Company Name
                 </label>
                 <input
@@ -412,7 +412,7 @@ export function CostCalculator() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
                   Additional Details
                 </label>
                 <textarea
@@ -478,7 +478,7 @@ export function CostCalculator() {
         </AnimatePresence>
 
         {!showContactForm && (
-          <p className="text-xs text-slate-500 dark:text-slate-400 text-center">
+          <p className="text-xs text-slate-600 dark:text-slate-400 text-center">
             *Estimates are approximate and may vary based on specific requirements
           </p>
         )}

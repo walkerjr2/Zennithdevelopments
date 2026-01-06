@@ -76,32 +76,32 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-slate-900 dark:bg-black border-t border-slate-800">
+    <footer className="bg-gradient-to-b from-slate-100 to-slate-200 dark:from-slate-900 dark:to-black border-t border-slate-200 dark:border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Logo width={200} height={60} />
-            <p className="mt-4 text-slate-400 text-sm leading-relaxed">
+            <p className="mt-4 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
               Transforming businesses through exceptional web development. 
               We build digital experiences that drive growth and delight users.
             </p>
             
             {/* Contact Info */}
             <div className="mt-6 space-y-3">
-              <div className="flex items-center gap-3 text-slate-400 text-sm">
+              <div className="flex items-center gap-3 text-slate-600 dark:text-slate-400 text-sm">
                 <EnvelopeIcon className="w-5 h-5 text-zd-electric-cyan" />
-                <a href="mailto:zennithdevelopments@gmail.com" className="hover:text-white transition-colors">
+                <a href="mailto:zennithdevelopments@gmail.com" className="hover:text-zd-royal-blue dark:hover:text-white transition-colors">
                   zennithdevelopments@gmail.com
                 </a>
               </div>
-              <div className="flex items-center gap-3 text-slate-400 text-sm">
+              <div className="flex items-center gap-3 text-slate-600 dark:text-slate-400 text-sm">
                 <PhoneIcon className="w-5 h-5 text-zd-electric-cyan" />
-                <a href="tel:+18768396403" className="hover:text-white transition-colors">
+                <a href="tel:+18768396403" className="hover:text-zd-royal-blue dark:hover:text-white transition-colors">
                   (876) 839-6403
                 </a>
               </div>
-              <div className="flex items-center gap-3 text-slate-400 text-sm">
+              <div className="flex items-center gap-3 text-slate-600 dark:text-slate-400 text-sm">
                 <MapPinIcon className="w-5 h-5 text-zd-electric-cyan" />
                 <span>kingston, JA</span>
               </div>
@@ -115,7 +115,7 @@ export function Footer() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-zd-electric-cyan transition-colors"
+                  className="text-slate-600 dark:text-slate-400 hover:text-zd-royal-blue dark:hover:text-zd-electric-cyan transition-colors"
                 >
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -126,7 +126,7 @@ export function Footer() {
 
           {/* Services Column */}
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-4">
               Services
             </h3>
             <ul className="space-y-3">
@@ -134,7 +134,7 @@ export function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="text-slate-400 hover:text-white transition-colors text-sm"
+                    className="text-slate-600 dark:text-slate-400 hover:text-zd-royal-blue dark:hover:text-white transition-colors text-sm"
                   >
                     {item.name}
                   </a>
@@ -145,7 +145,7 @@ export function Footer() {
 
           {/* Company Column */}
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-4">
               Company
             </h3>
             <ul className="space-y-3">
@@ -153,7 +153,7 @@ export function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="text-slate-400 hover:text-white transition-colors text-sm"
+                    className="text-slate-600 dark:text-slate-400 hover:text-zd-royal-blue dark:hover:text-white transition-colors text-sm"
                   >
                     {item.name}
                   </a>
@@ -164,7 +164,7 @@ export function Footer() {
 
           {/* Resources Column */}
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-4">
               Resources
             </h3>
             <ul className="space-y-3">
@@ -172,7 +172,7 @@ export function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="text-slate-400 hover:text-white transition-colors text-sm"
+                    className="text-slate-600 dark:text-slate-400 hover:text-zd-royal-blue dark:hover:text-white transition-colors text-sm"
                   >
                     {item.name}
                   </a>
@@ -183,9 +183,9 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-slate-800">
+        <div className="mt-12 pt-8 border-t border-slate-300 dark:border-slate-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-slate-400 text-sm">
+            <p className="text-slate-600 dark:text-slate-400 text-sm">
               © {new Date().getFullYear()} ZennithDevelopments. All rights reserved.
             </p>
             <div className="flex gap-6">
@@ -193,7 +193,7 @@ export function Footer() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-slate-400 hover:text-white transition-colors text-sm"
+                  className="text-slate-600 dark:text-slate-400 hover:text-zd-royal-blue dark:hover:text-white transition-colors text-sm"
                 >
                   {item.name}
                 </a>

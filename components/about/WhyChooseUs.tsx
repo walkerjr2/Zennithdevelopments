@@ -147,7 +147,7 @@ export function WhyChooseUs() {
         >
           <div className="inline-block bg-gradient-to-r from-zd-electric-cyan/10 to-zd-royal-blue/10 
                         border-2 border-zd-royal-blue/20 rounded-2xl p-8 max-w-3xl">
-            <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+            <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
               <span className="font-bold text-zd-royal-blue dark:text-zd-electric-cyan">
                 Still not convinced?
               </span>{' '}

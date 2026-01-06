@@ -8,7 +8,7 @@ export function CalendarBooking() {
       <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
         Schedule a Strategy Call
       </h3>
-      <p className="text-slate-600 dark:text-slate-300 mb-6">
+      <p className="text-slate-600 dark:text-slate-400 mb-6">
         Book a free 30-minute consultation to discuss your project goals and requirements.
       </p>
 
@@ -19,7 +19,7 @@ export function CalendarBooking() {
         />
       </div>
 
-      <p className="text-xs text-slate-500 dark:text-slate-400 mt-4 text-center">
+      <p className="text-xs text-slate-600 dark:text-slate-400 mt-4 text-center">
         All consultations are free and no-obligation. We respect your time and privacy.
       </p>
     </div>

@@ -110,15 +110,15 @@ export function FinalCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-              className="text-center p-6"
+              className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10"
             >
-              <div className="inline-flex p-3 rounded-xl bg-white/10 backdrop-blur-sm mb-4">
+              <div className="inline-flex p-3 rounded-xl bg-zd-electric-cyan/20 mb-4">
                 <guarantee.icon className="w-8 h-8 text-zd-electric-cyan" />
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">
+              <h3 className="text-xl font-bold text-white mb-2">
                 {guarantee.title}
               </h3>
-              <p className="text-slate-300 text-sm">
+              <p className="text-slate-200">
                 {guarantee.description}
               </p>
             </motion.div>

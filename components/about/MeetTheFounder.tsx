@@ -58,26 +58,26 @@ export function MeetTheFounder() {
 
             {/* Quick Info Cards */}
             <div className="space-y-4">
-              <div className="flex items-center gap-3 p-4 bg-white dark:bg-slate-900 rounded-xl">
+              <div className="flex items-center gap-3 p-4 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-transparent">
                 <MapPinIcon className="w-6 h-6 text-zd-royal-blue" />
                 <div>
-                  <div className="text-sm text-slate-500 dark:text-slate-400">Based in</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">Based in</div>
                   <div className="font-semibold text-slate-900 dark:text-white">Jamaica 🇯🇲</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-4 bg-white dark:bg-slate-900 rounded-xl">
+              <div className="flex items-center gap-3 p-4 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-transparent">
                 <CodeBracketIcon className="w-6 h-6 text-zd-electric-cyan" />
                 <div>
-                  <div className="text-sm text-slate-500 dark:text-slate-400">Specializes in</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">Specializes in</div>
                   <div className="font-semibold text-slate-900 dark:text-white">Full-Stack Development</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-4 bg-white dark:bg-slate-900 rounded-xl">
+              <div className="flex items-center gap-3 p-4 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-transparent">
                 <TrophyIcon className="w-6 h-6 text-zd-accent-amber" />
                 <div>
-                  <div className="text-sm text-slate-500 dark:text-slate-400">Completed</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">Completed</div>
                   <div className="font-semibold text-slate-900 dark:text-white">50+ Projects</div>
                 </div>
               </div>
@@ -138,7 +138,7 @@ export function MeetTheFounder() {
                     <span
                       key={skill}
                       className="px-4 py-2 bg-gradient-to-r from-zd-royal-blue/10 to-zd-electric-cyan/10 
-                               border border-zd-royal-blue/20 text-slate-700 dark:text-slate-300 
+                               border border-zd-royal-blue/20 text-slate-600 dark:text-slate-400 
                                rounded-full text-sm font-medium"
                     >
                       {skill}

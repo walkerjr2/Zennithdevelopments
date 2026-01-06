@@ -67,7 +67,7 @@ export function CTACluster({
       {showPortfolioLink && (
         <a
           href="/portfolio"
-          className="font-semibold text-zd-royal-blue hover:text-zd-electric-cyan transition-colors underline underline-offset-4 text-lg"
+          className="font-semibold text-zd-royal-blue dark:text-zd-electric-cyan hover:text-zd-electric-cyan dark:hover:text-zd-bright-cyan transition-colors underline underline-offset-4 text-lg"
           onClick={() => trackEvent('cta_clicked', { action: 'portfolio', context })}
         >
           View Our Work

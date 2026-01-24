@@ -95,6 +95,7 @@ const projects = [
 
 export function Portfolio() {
   const [activeCategory, setActiveCategory] = useState('All');
+  const [showAll, setShowAll] = useState(false);
   const { openModal } = useContactModal();
   const { trackEvent } = useAnalytics();
 
@@ -103,9 +104,19 @@ export function Portfolio() {
       ? projects
       : projects.filter((p) => p.category === activeCategory);
 
+  // Show only 6 projects initially, or all if expanded
+  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 6);
+  const hasMoreProjects = filteredProjects.length > 6;
+
   const handleCategoryChange = (category: string) => {
     setActiveCategory(category);
+    setShowAll(false); // Reset to collapsed when changing category
     trackEvent('portfolio_filter', { category });
+  };
+
+  const handleToggleShowAll = () => {
+    setShowAll(!showAll);
+    trackEvent('portfolio_toggle', { action: showAll ? 'collapse' : 'expand' });
   };
 
   return (
@@ -133,26 +144,41 @@ export function Portfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
+          className="mb-12"
         >
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => handleCategoryChange(category)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 border ${
-                activeCategory === category
-                  ? 'bg-zd-royal-blue text-white shadow-lg shadow-zd-royal-blue/30 border-zd-royal-blue'
-                  : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 border-slate-200 dark:border-slate-700'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
+          <div className="flex flex-wrap justify-center gap-3">
+            {categories.map((category) => {
+              const categoryCount = category === 'All' 
+                ? projects.length 
+                : projects.filter((p) => p.category === category).length;
+              
+              return (
+                <button
+                  key={category}
+                  onClick={() => handleCategoryChange(category)}
+                  className={`px-6 py-3 rounded-full font-medium transition-all duration-300 border inline-flex items-center gap-2 ${
+                    activeCategory === category
+                      ? 'bg-zd-royal-blue text-white shadow-lg shadow-zd-royal-blue/30 border-zd-royal-blue scale-105'
+                      : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 border-slate-200 dark:border-slate-700 hover:scale-105'
+                  }`}
+                >
+                  <span>{category}</span>
+                  <span className={`text-xs px-2 py-0.5 rounded-full ${
+                    activeCategory === category
+                      ? 'bg-white/20 text-white'
+                      : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400'
+                  }`}>
+                    {categoryCount}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
         </motion.div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
@@ -237,6 +263,37 @@ export function Portfolio() {
             </motion.div>
           ))}
         </div>
+
+        {/* View All / Show Less Button */}
+        {hasMoreProjects && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-12 text-center"
+          >
+            <button
+              onClick={handleToggleShowAll}
+              className="group inline-flex items-center gap-2 px-8 py-4 bg-white dark:bg-slate-800 text-zd-royal-blue dark:text-zd-electric-cyan border-2 border-zd-royal-blue dark:border-zd-electric-cyan rounded-full font-semibold hover:bg-zd-royal-blue hover:dark:bg-zd-electric-cyan hover:text-white hover:dark:text-slate-900 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              <span>{showAll ? 'Show Less' : `View All ${filteredProjects.length} Projects`}</span>
+              <svg 
+                className={`w-5 h-5 transition-transform duration-300 ${showAll ? 'rotate-180' : ''}`}
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {!showAll && (
+              <p className="mt-4 text-sm text-slate-500 dark:text-slate-400">
+                Showing {displayedProjects.length} of {filteredProjects.length} projects
+              </p>
+            )}
+          </motion.div>
+        )}
 
         {/* Bottom CTA */}
         <motion.div

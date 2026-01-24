@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "test": "playwright test",
-    "test:ui": "playwright test --ui"
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed --project=chromium",
+    "test:debug": "playwright test --debug --project=chromium",
+    "test:comprehensive": "playwright test e2e/comprehensive-website-test.spec.ts --headed --project=chromium",
+    "test:comprehensive:ui": "playwright test e2e/comprehensive-website-test.spec.ts --ui"
   },
   "dependencies": {
     "@emailjs/nodejs": "^5.0.2",
